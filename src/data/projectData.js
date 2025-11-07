@@ -31,21 +31,36 @@ export const projectData = {
     about: {
         title: "Sobre o Projeto",
         content: `
-      Este projeto foi desenvolvido como um trabalho acadêmico que documenta sua 
-      própria criação - um template reutilizável para apresentação de projetos 
-      universitários.
+        
+      **Visão Geral:**
+      Este projeto acadêmico representa a criação de um template moderno e profissional para apresentação de trabalhos universitários, TCCs e projetos de pesquisa. Desenvolvido como um trabalho que documenta sua própria construção, ele demonstra na prática os conceitos e tecnologias utilizadas em seu desenvolvimento.
+
+      **Contexto e Motivação:**
+      Durante a graduação, observei que muitos estudantes enfrentam dificuldades para apresentar seus projetos de forma visual e profissional. A maioria das apresentações se limita a slides em PowerPoint ou documentos em PDF, que não conseguem transmitir adequadamente a complexidade e qualidade dos trabalhos desenvolvidos. Este template surge como solução para democratizar apresentações web de alta qualidade.
+
+      **Objetivo Principal:**
+      Fornecer uma base sólida, moderna e totalmente customizável que permita estudantes focarem no conteúdo de seus projetos, sem precisar investir tempo aprendendo desenvolvimento web do zero. O template é projetado para ser intuitivo: basta editar um único arquivo de dados (projectData.js) para personalizar todo o conteúdo.
+
+      **Metodologia de Desenvolvimento:**
+      O projeto foi desenvolvido seguindo as melhores práticas de engenharia de software moderna:
       
-      O objetivo principal é fornecer uma base sólida e moderna para estudantes 
-      apresentarem seus trabalhos de forma profissional, eliminando a necessidade 
-      de criar estruturas do zero e permitindo foco total no conteúdo do projeto.
-      
-      Utilizamos Next.js para performance otimizada, Tailwind CSS para estilização 
-      rápida e componentização React para máxima reutilização de código.
+      • Arquitetura baseada em componentes React para máxima reutilização
+      • Next.js para otimização automática de performance e SEO
+      • Tailwind CSS para estilização rápida e consistente
+      • Sistema de rotas dedicadas para melhor organização do conteúdo
+      • Configuração centralizada para facilitar personalização
+      • Versionamento com Git para rastreamento de mudanças
+
+      **Diferenciais Técnicos:**
+      Este não é apenas um template estático. Ele incorpora recursos avançados como Server-Side Rendering (SSR), otimização automática de imagens, geração de páginas estáticas, e um sistema de temas configurável. Tudo isso mantendo simplicidade de uso para quem não tem conhecimento técnico profundo.
+
+      **Aplicabilidade:**
+      O template é versátil e pode ser adaptado para diversos tipos de projetos acadêmicos: TCCs, projetos de iniciação científica, trabalhos de disciplinas, portfólios de projetos de extensão, documentação de pesquisas, e até mesmo apresentações de defesa de mestrado/doutorado.
     `,
         stats: [
             { label: "Tempo de Desenvolvimento", value: "3 semanas" },
-            { label: "Tecnologias", value: "5+" },
-            { label: "Componentes", value: "12" },
+            { label: "Tecnologias", value: "6" },
+            { label: "Componentes", value: "5" },
         ],
     },
 
