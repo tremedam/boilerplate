@@ -35,30 +35,30 @@ export default function Header({ data, theme }) {
 
         {/* Menu de Navegação */}
         <nav className="hidden md:flex gap-6">
-          <a
-            href="#about"
+          <Link
+            href="/project#about"
             className="text-gray-700 hover:text-gray-900 transition"
           >
             Sobre
-          </a>
-          <a
-            href="#features"
+          </Link>
+          <Link
+            href="/features"
             className="text-gray-700 hover:text-gray-900 transition"
           >
             Funcionalidades
-          </a>
-          <a
-            href="#technologies"
+          </Link>
+          <Link
+            href="/technologies"
             className="text-gray-700 hover:text-gray-900 transition"
           >
             Tecnologias
-          </a>
-          <a
-            href="#team"
+          </Link>
+          <Link
+            href="/team"
             className="text-gray-700 hover:text-gray-900 transition"
           >
             Equipe
-          </a>
+          </Link>
         </nav>
 
         {/* Menu Mobile */}

@@ -1,6 +1,6 @@
 # Boilerplate Next.js + Tailwind para Projetos Acadêmicos
 
-Um template opinativo em Next.js para apresentar projetos acadêmicos de forma bonita e organizada. Inclui seções prontas (Hero, Sobre, Funcionalidades, Tecnologias, Equipe, Galeria, Resultados e Rodapé) com conteúdo centralizado em um único arquivo de dados.
+Um template genérico criado em Next.js para apresentar projetos acadêmicos de forma bonita e organizada. Inclui seções prontas (Hero, Sobre, Funcionalidades, Tecnologias, Equipe, Galeria, Resultados e Rodapé) com conteúdo centralizado em um único arquivo de dados.
 
 ## 🚀 Stack
 
@@ -23,12 +23,15 @@ boilerplate/
 │  └─ images/            # Logos, screenshots, ícones de tecnologias, etc.
 ├─ src/
 │  ├─ components/
-│  │  └─ Project/        # Seções da página do projeto
+│  │  └─ Project/        # Componentes reutilizáveis
 │  │     ├─ AboutSection.jsx
 │  │     ├─ FeaturesSection.jsx
 │  │     ├─ Footer.jsx
+│  │     ├─ GallerySection.jsx
 │  │     ├─ Header.jsx
 │  │     ├─ HeroSection.jsx
+│  │     ├─ ProjectLayout.jsx  # Layout comum (Header + Footer)
+│  │     ├─ ResultsSection.jsx
 │  │     ├─ TeamSection.jsx
 │  │     └─ TechnologiesSection.jsx
 │  ├─ data/
@@ -36,17 +39,20 @@ boilerplate/
 │  ├─ pages/
 │  │  ├─ _app.js
 │  │  ├─ index.jsx        # Redireciona para /project
-│  │  └─ project.jsx      # Página principal com todas as seções
+│  │  ├─ project.jsx      # Página principal com seções resumidas
+│  │  ├─ features.jsx     # Página dedicada: Funcionalidades
+│  │  ├─ technologies.jsx # Página dedicada: Tecnologias
+│  │  └─ team.jsx         # Página dedicada: Equipe
 │  └─ styles/
 │     └─ globals.css
-├─ jsconfig.json          # Alias @ para ./src
+├─ jsconfig.json          # Atalho @ para ./src
 ├─ next.config.js
 ├─ package.json
 ├─ postcss.config.js
 └─ tailwind.config.js
 ```
 
-Alias de importação configurado em `jsconfig.json`:
+Atalho de importação configurado em `jsconfig.json`:
 
 ```json
 {
@@ -59,9 +65,23 @@ Alias de importação configurado em `jsconfig.json`:
 }
 ```
 
+Isso permite importar com `@/components/...` em vez de `../../components/...`.
+
+## 🌐 Rotas disponíveis
+
+O projeto possui as seguintes páginas:
+
+- `/` — Redireciona automaticamente para `/project`
+- `/project` — Página principal com Hero, Sobre, preview de Tecnologias/Equipe, Galeria, Resultados e Rodapé
+- `/features` — Listagem completa de funcionalidades
+- `/technologies` — Grade completa de tecnologias utilizadas
+- `/team` — Membros da equipe e orientador
+
+A navegação no Header ajusta automaticamente entre essas rotas.
+
 ## 🧩 Como personalizar o conteúdo
 
-Edite apenas `src/data/projectData.js`. Todas as seções da página lêem deste arquivo:
+Edite apenas `src/data/projectData.js`. Todas as páginas lêem deste arquivo:
 
 - `header`: título, subtítulo e logo
 - `hero`: título, descrição, imagem e botões (ex.: Demo, Documentação)
@@ -72,7 +92,7 @@ Edite apenas `src/data/projectData.js`. Todas as seções da página lêem deste
 - `gallery`: capturas de tela
 - `results`: resultados alcançados
 - `footer`: informações institucionais e contato
-- `theme`: paleta de cores (primária, secundária, etc.)
+- `theme`: paleta de cores (primária, secundária, accent, etc.)
 
 Imagens: coloque seus arquivos em `public/images/...` e referencie-os (ex.: `/images/tech/react.png`).
 
@@ -99,7 +119,8 @@ npm run dev
 
 3. Acesse:
 
-- Abra http://localhost:3000 — você será redirecionado para `/project` com todas as seções.
+- Abra http://localhost:3000 — você será redirecionado para `/project`.
+- Navegue para `/features`, `/technologies` ou `/team` através do menu.
 
 ## 📦 Build e execução em produção
 
@@ -111,18 +132,25 @@ npm run start
 ```
 
 Dicas de deploy:
-- Vercel (recomendado para Next.js): apenas importe o repositório.
-- Docker: crie uma imagem que execute `npm run build` e `npm run start`.
-- Outras plataformas Node (Railway, Render, etc.): defina o comando de start como `npm run start`.
+- **Vercel** (recomendado para Next.js): apenas importe o repositório.
+- **Docker**: crie uma imagem que execute `npm run build` e `npm run start`.
+- **Outras plataformas Node** (Railway, Render, etc.): defina o comando de start como `npm run start`.
 
 ## 🎨 Estilos
 
 - Tailwind CSS já configurado em `tailwind.config.js` e `postcss.config.js`.
-- Classes utilitárias são usadas diretamente nos componentes em `src/components/Project/*`.
+- Classes utilitárias são usadas diretamente nos componentes.
+- Cores do tema (`theme` em `projectData.js`) aplicadas dinamicamente via inline styles.
 
 ## 🔧 Configurações do Next.js
 
 `next.config.js` habilita `reactStrictMode` por padrão. Ajuste conforme necessário.
+
+## 🏗️ Arquitetura de componentes
+
+- **ProjectLayout** — Layout reutilizável com Header e Footer para páginas dedicadas.
+- **Seções modulares** — Cada seção (About, Features, etc.) é um componente independente.
+- **Páginas dedicadas** — Features, Technologies e Team têm rotas próprias para melhor organização e SEO.
 
 ## 📑 Licença
 
@@ -130,10 +158,13 @@ Este projeto está licenciado sob a licença MIT. Veja `docs/LICENSE` para mais 
 
 ## 💡 Ideias de melhoria
 
-- Adicionar testes de componentes
+- Adicionar testes de componentes (Jest + React Testing Library)
 - Dark mode baseado no tema
-- Animações leves em seções
-- Links dinâmicos para PDF da documentação
+- Animações leves em seções (Framer Motion)
+- Otimização de imagens com `next/image`
+- Breadcrumb nas páginas dedicadas
+- Menu mobile responsivo completo
+- Internacionalização (i18n)
 
 ---
 
