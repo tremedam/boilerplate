@@ -132,7 +132,7 @@ export const projectData = {
                 role: "Desenvolvedor Full-Stack & Designer",
                 image: "/images/team/thiago.jpg",
                 github: "https://github.com/tremedam",
-                linkedin: "https://linkedin.com/in/thiago-dias",
+                linkedin: "https://www.linkedin.com/in/thiago-fellipe-28471a26a/",
             },
         ],
         advisor: {
