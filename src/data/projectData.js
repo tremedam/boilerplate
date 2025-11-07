@@ -93,32 +93,32 @@ export const projectData = {
             {
                 name: "Next.js 14",
                 description: "Framework React para aplicações web modernas com SSR e SSG",
-                image: "/images/tech/nextjs.png",
+                image: "/images/tech/nextjs.svg",
             },
             {
                 name: "React 18",
                 description: "Biblioteca JavaScript para construção de interfaces de usuário",
-                image: "/images/tech/react.png",
+                image: "/images/tech/react.svg",
             },
             {
                 name: "Tailwind CSS",
                 description: "Framework CSS utility-first para estilização rápida e responsiva",
-                image: "/images/tech/tailwind.png",
+                image: "/images/tech/tailwind.svg",
             },
             {
                 name: "JavaScript (ES6+)",
                 description: "Linguagem de programação moderna com recursos avançados",
-                image: "/images/tech/javascript.png",
+                image: "/images/tech/javascript.svg",
             },
             {
                 name: "Git & GitHub",
                 description: "Controle de versão e hospedagem de código-fonte",
-                image: "/images/tech/git.png",
+                image: "/images/tech/github.svg",
             },
             {
                 name: "Vercel",
                 description: "Plataforma de deploy otimizada para projetos Next.js",
-                image: "/images/tech/vercel.png",
+                image: "/images/tech/vercel.svg",
             },
         ],
     },
