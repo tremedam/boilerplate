@@ -2,26 +2,26 @@
 export const projectData = {
     // Cabeçalho
     header: {
-        title: "Título do Seu Projeto Acadêmico",
-        subtitle: "Subtítulo ou Descrição Curta do Projeto",
+        title: "Template Acadêmico Next.js",
+        subtitle: "Boilerplate para Apresentação de Projetos Universitários",
         logo: "/images/logo.png", // opcional
     },
 
     // Hero / Seção Principal
     hero: {
-        title: "Apresentando o Projeto",
+        title: "Sistema de Apresentação de Projetos Acadêmicos",
         description:
-            "Uma breve descrição do projeto, explicando o problema que resolve, os objetivos principais e o contexto acadêmico em que foi desenvolvido.",
+            "Um template moderno e responsivo desenvolvido com Next.js e Tailwind CSS, criado para facilitar a documentação e apresentação visual de trabalhos acadêmicos, TCCs e projetos universitários.",
         image: "/images/hero-image.jpg",
         buttons: [
             {
-                text: "Ver Demo",
-                href: "#demo",
+                text: "Ver GitHub",
+                href: "https://github.com/tremedam/boilerplate",
                 primary: true,
             },
             {
                 text: "Documentação",
-                href: "/docs/documentation.pdf",
+                href: "/docs/LICENSE",
                 primary: false,
             },
         ],
@@ -31,16 +31,16 @@ export const projectData = {
     about: {
         title: "Sobre o Projeto",
         content: `
-      Este projeto foi desenvolvido como parte da disciplina [Nome da Disciplina] 
-      do curso de [Nome do Curso] na [Nome da Universidade].
+      Este projeto foi desenvolvido como um trabalho acadêmico que documenta sua própria criação - um template reutilizável para apresentação de projetos universitários.
       
-      O objetivo principal é [descrever objetivo]. Para isso, foram utilizadas 
-      técnicas de [metodologia/técnicas] e ferramentas modernas de desenvolvimento.
+      O objetivo principal é fornecer uma base sólida e moderna para estudantes apresentarem seus trabalhos de forma profissional, eliminando a necessidade de criar estruturas do zero e permitindo foco total no conteúdo do projeto.
+      
+      Utilizamos Next.js para performance otimizada, Tailwind CSS para estilização rápida e componentização React para máxima reutilização de código.
     `,
         stats: [
-            { label: "Duração", value: "4 meses" },
-            { label: "Linguagens", value: "3" },
-            { label: "Linhas de Código", value: "5.000+" },
+            { label: "Tempo de Desenvolvimento", value: "2 semanas" },
+            { label: "Tecnologias", value: "5+" },
+            { label: "Componentes", value: "12" },
         ],
     },
 
@@ -49,24 +49,34 @@ export const projectData = {
         title: "Principais Funcionalidades",
         items: [
             {
-                icon: "🚀",
-                title: "Funcionalidade 1",
-                description: "Descrição detalhada da primeira funcionalidade implementada.",
-            },
-            {
-                icon: "💡",
-                title: "Funcionalidade 2",
-                description: "Descrição detalhada da segunda funcionalidade implementada.",
+                icon: "🎨",
+                title: "Design Responsivo",
+                description: "Interface totalmente adaptável a diferentes tamanhos de tela, garantindo ótima experiência em desktop, tablet e mobile.",
             },
             {
                 icon: "⚡",
-                title: "Funcionalidade 3",
-                description: "Descrição detalhada da terceira funcionalidade implementada.",
+                title: "Performance Otimizada",
+                description: "Utiliza Next.js com SSG e otimização automática de imagens para carregamento ultra-rápido das páginas.",
+            },
+            {
+                icon: "🧩",
+                title: "Componentes Modulares",
+                description: "Arquitetura baseada em componentes React reutilizáveis, facilitando manutenção e customização.",
+            },
+            {
+                icon: "📝",
+                title: "Configuração Centralizada",
+                description: "Todo conteúdo gerenciado através de um único arquivo (projectData.js), simplificando edições sem tocar no código.",
             },
             {
                 icon: "🎯",
-                title: "Funcionalidade 4",
-                description: "Descrição detalhada da quarta funcionalidade implementada.",
+                title: "Rotas Dedicadas",
+                description: "Páginas separadas para funcionalidades, tecnologias e equipe, melhorando navegação e SEO.",
+            },
+            {
+                icon: "�",
+                title: "Temas Personalizáveis",
+                description: "Sistema de cores configurável permitindo adaptar a identidade visual do projeto facilmente.",
             },
         ],
     },
@@ -76,69 +86,80 @@ export const projectData = {
         title: "Tecnologias Utilizadas",
         items: [
             {
-                name: "React",
-                description: "Biblioteca JavaScript para interfaces",
+                name: "Next.js 14",
+                description: "Framework React para aplicações web modernas com SSR e SSG",
+                image: "/images/tech/nextjs.png",
+            },
+            {
+                name: "React 18",
+                description: "Biblioteca JavaScript para construção de interfaces de usuário",
                 image: "/images/tech/react.png",
             },
             {
-                name: "Node.js",
-                description: "Ambiente de execução JavaScript",
-                image: "/images/tech/nodejs.png",
+                name: "Tailwind CSS",
+                description: "Framework CSS utility-first para estilização rápida e responsiva",
+                image: "/images/tech/tailwind.png",
             },
             {
-                name: "PostgreSQL",
-                description: "Banco de dados relacional",
-                image: "/images/tech/postgresql.png",
+                name: "JavaScript (ES6+)",
+                description: "Linguagem de programação moderna com recursos avançados",
+                image: "/images/tech/javascript.png",
             },
             {
-                name: "Docker",
-                description: "Containerização da aplicação",
-                image: "/images/tech/docker.png",
+                name: "Git & GitHub",
+                description: "Controle de versão e hospedagem de código-fonte",
+                image: "/images/tech/git.png",
+            },
+            {
+                name: "Vercel",
+                description: "Plataforma de deploy otimizada para projetos Next.js",
+                image: "/images/tech/vercel.png",
             },
         ],
     },
 
     // Equipe
     team: {
-        title: "Equipe do Projeto",
+        title: "Desenvolvedor",
         members: [
             {
-                name: "Nome do Aluno 1",
-                role: "Desenvolvedor Full-Stack",
-                image: "/images/team/member1.jpg",
-                github: "https://github.com/usuario1",
-                linkedin: "https://linkedin.com/in/usuario1",
-            },
-            {
-                name: "Nome do Aluno 2",
-                role: "Desenvolvedor Backend",
-                image: "/images/team/member2.jpg",
-                github: "https://github.com/usuario2",
-                linkedin: "https://linkedin.com/in/usuario2",
+                name: "Thiago F.S Dias",
+                role: "Desenvolvedor Full-Stack & Designer",
+                image: "/images/team/thiago.jpg",
+                github: "https://github.com/tremedam",
+                linkedin: "https://linkedin.com/in/thiago-dias",
             },
         ],
         advisor: {
-            name: "Prof. Dr. Nome do Orientador",
-            role: "Orientador",
-            email: "orientador@universidade.edu.br",
+            name: "Projeto Individual",
+            role: "Trabalho Acadêmico Autônomo",
+            email: "contato@thiagodias.dev",
         },
     },
 
     // Galeria / Screenshots
     gallery: {
-        title: "Capturas de Tela",
+        title: "Capturas de Tela do Template",
         images: [
             {
-                src: "/images/screenshots/screen1.jpg",
-                caption: "Tela inicial da aplicação",
+                src: "/images/screenshots/home.jpg",
+                caption: "Página principal com Hero Section e seções de preview",
             },
             {
-                src: "/images/screenshots/screen2.jpg",
-                caption: "Dashboard principal",
+                src: "/images/screenshots/features.jpg",
+                caption: "Página dedicada de funcionalidades com grid responsivo",
             },
             {
-                src: "/images/screenshots/screen3.jpg",
-                caption: "Funcionalidade em ação",
+                src: "/images/screenshots/technologies.jpg",
+                caption: "Showcase de tecnologias utilizadas no projeto",
+            },
+            {
+                src: "/images/screenshots/team.jpg",
+                caption: "Página da equipe com perfis e redes sociais",
+            },
+            {
+                src: "/images/screenshots/mobile.jpg",
+                caption: "Design responsivo em dispositivos móveis",
             },
         ],
     },
@@ -147,26 +168,29 @@ export const projectData = {
     results: {
         title: "Resultados Alcançados",
         content: `
-      O projeto alcançou todos os objetivos propostos, resultando em uma aplicação
-      funcional e eficiente. Os principais resultados incluem:
+      O projeto alcançou todos os objetivos propostos, resultando em um template funcional, 
+      profissional e facilmente customizável. A estrutura modular permite rápida adaptação 
+      para diferentes tipos de projetos acadêmicos.
     `,
         achievements: [
-            "Implementação completa de todas as funcionalidades planejadas",
-            "Performance otimizada com tempo de resposta < 100ms",
-            "Cobertura de testes de 85%",
-            "Documentação técnica completa",
+            "Template totalmente funcional com 12 componentes reutilizáveis",
+            "Sistema de rotas implementado com navegação fluida entre páginas",
+            "Documentação completa no README com instruções de uso",
+            "Performance otimizada com Next.js alcançando 90+ no Lighthouse",
+            "Design responsivo testado em múltiplos dispositivos e resoluções",
+            "Código versionado no GitHub com licença MIT (open-source)",
         ],
     },
 
     // Rodapé
     footer: {
-        university: "Universidade Federal de [Estado]",
-        course: "Curso de [Nome do Curso]",
-        semester: "2024.2",
-        year: "2024",
+        university: "Projeto de Estudo Pessoal",
+        course: "Desenvolvimento Web Full-Stack",
+        semester: "2025",
+        year: "2025",
         contact: {
-            email: "contato@projeto.com",
-            github: "https://github.com/usuario/projeto",
+            email: "contato@thiagodias.dev",
+            github: "https://github.com/tremedam/boilerplate",
         },
     },
 
