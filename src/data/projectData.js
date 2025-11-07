@@ -2,9 +2,9 @@
 export const projectData = {
     // Cabeçalho
     header: {
-        title: "Template Acadêmico Next.js",
+        title: "Template Acadêmico Pro",
         subtitle: "Boilerplate para Apresentação de Projetos Universitários",
-        logo: "/images/logo.png", // opcional
+        logo: "/images/logotemplate.png", // opcional
     },
 
     // Hero / Seção Principal
@@ -12,7 +12,7 @@ export const projectData = {
         title: "Sistema de Apresentação de Projetos Acadêmicos",
         description:
             "Um template moderno e responsivo desenvolvido com Next.js e Tailwind CSS, criado para facilitar a documentação e apresentação visual de trabalhos acadêmicos, TCCs e projetos universitários.",
-        image: "/images/hero-image.jpg",
+        image: "/images/apresentacao.png",
         buttons: [
             {
                 text: "Ver GitHub",
@@ -31,14 +31,19 @@ export const projectData = {
     about: {
         title: "Sobre o Projeto",
         content: `
-      Este projeto foi desenvolvido como um trabalho acadêmico que documenta sua própria criação - um template reutilizável para apresentação de projetos universitários.
+      Este projeto foi desenvolvido como um trabalho acadêmico que documenta sua 
+      própria criação - um template reutilizável para apresentação de projetos 
+      universitários.
       
-      O objetivo principal é fornecer uma base sólida e moderna para estudantes apresentarem seus trabalhos de forma profissional, eliminando a necessidade de criar estruturas do zero e permitindo foco total no conteúdo do projeto.
+      O objetivo principal é fornecer uma base sólida e moderna para estudantes 
+      apresentarem seus trabalhos de forma profissional, eliminando a necessidade 
+      de criar estruturas do zero e permitindo foco total no conteúdo do projeto.
       
-      Utilizamos Next.js para performance otimizada, Tailwind CSS para estilização rápida e componentização React para máxima reutilização de código.
+      Utilizamos Next.js para performance otimizada, Tailwind CSS para estilização 
+      rápida e componentização React para máxima reutilização de código.
     `,
         stats: [
-            { label: "Tempo de Desenvolvimento", value: "2 semanas" },
+            { label: "Tempo de Desenvolvimento", value: "3 semanas" },
             { label: "Tecnologias", value: "5+" },
             { label: "Componentes", value: "12" },
         ],
@@ -49,32 +54,32 @@ export const projectData = {
         title: "Principais Funcionalidades",
         items: [
             {
-                icon: "🎨",
+                icon: "",
                 title: "Design Responsivo",
                 description: "Interface totalmente adaptável a diferentes tamanhos de tela, garantindo ótima experiência em desktop, tablet e mobile.",
             },
             {
-                icon: "⚡",
+                icon: "",
                 title: "Performance Otimizada",
                 description: "Utiliza Next.js com SSG e otimização automática de imagens para carregamento ultra-rápido das páginas.",
             },
             {
-                icon: "🧩",
+                icon: "",
                 title: "Componentes Modulares",
                 description: "Arquitetura baseada em componentes React reutilizáveis, facilitando manutenção e customização.",
             },
             {
-                icon: "📝",
+                icon: "",
                 title: "Configuração Centralizada",
                 description: "Todo conteúdo gerenciado através de um único arquivo (projectData.js), simplificando edições sem tocar no código.",
             },
             {
-                icon: "🎯",
+                icon: "",
                 title: "Rotas Dedicadas",
                 description: "Páginas separadas para funcionalidades, tecnologias e equipe, melhorando navegação e SEO.",
             },
             {
-                icon: "�",
+                icon: "",
                 title: "Temas Personalizáveis",
                 description: "Sistema de cores configurável permitindo adaptar a identidade visual do projeto facilmente.",
             },
@@ -189,14 +194,14 @@ export const projectData = {
         semester: "2025",
         year: "2025",
         contact: {
-            email: "contato@thiagodias.dev",
+            email: "thiagofellipe055@gmail.com",
             github: "https://github.com/tremedam/boilerplate",
         },
     },
 
     // Configuração de Cores
     theme: {
-        primary: "#2563eb", // azul
+        primary: "#0a47c9ff", // azul
         secondary: "#7c3aed", // roxo
         accent: "#f59e0b", // laranja
         background: "#ffffff",

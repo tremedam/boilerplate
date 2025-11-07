@@ -23,11 +23,10 @@ export default function HeroSection({ data, theme }) {
                 <a
                   key={index}
                   href={button.href}
-                  className={`px-6 py-3 rounded-lg font-semibold transition shadow-lg ${
-                    button.primary
+                  className={`px-6 py-3 rounded-lg font-semibold transition shadow-lg ${button.primary
                       ? "text-white hover:opacity-90"
                       : "bg-white text-gray-800 hover:bg-gray-100"
-                  }`}
+                    }`}
                   style={
                     button.primary
                       ? { backgroundColor: theme.primary }
@@ -41,12 +40,12 @@ export default function HeroSection({ data, theme }) {
           </div>
 
           {/* Imagem */}
-          <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl">
+          <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl bg-white flex items-center justify-center p-8">
             <Image
               src={data.image}
               alt={data.title}
               fill
-              className="object-cover"
+              className="object-contain"
               priority
             />
           </div>
