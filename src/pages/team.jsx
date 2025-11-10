@@ -1,9 +1,12 @@
 import Image from "next/image";
 import { projectData } from "@/data/projectData";
 import ProjectLayout from "@/components/Project/ProjectLayout";
+import { useThemeColors } from "@/hooks/useThemeColors";
 
 export default function TeamPage() {
     const { team, header, footer, theme } = projectData;
+    const { colors } = useThemeColors();
+
     return (
         <ProjectLayout
             headerData={header}
@@ -14,7 +17,8 @@ export default function TeamPage() {
         >
             <section className="py-16 max-w-6xl mx-auto px-4" id="team">
                 <h1
-                    className="text-4xl font-bold mb-8 text-blue-900 dark:text-blue-400"
+                    className="text-4xl font-bold mb-8 transition-colors duration-300"
+                    style={{ color: colors.title }}
                 >
                     {team.title || "Equipe do Projeto"}
                 </h1>

@@ -214,12 +214,51 @@ export const projectData = {
         },
     },
 
-    // Configuração de Cores
+    // Configuração de Cores (Light e Dark Mode)
     theme: {
-        primary: "#2563eb ", // azul tech (Next.js inspired)
-        secondary: "#0f172a", // slate escuro (moderno/tech)
-        accent: "#09c8aea3", // cyan vibrante (destaque tech)
-        background: "#ffffff",
-        text: "#1f2937",
+        light: {
+            primary: "#2563eb", // azul tech (Next.js inspired)
+            secondary: "#0f172a", // slate escuro (moderno/tech)
+            accent: "#09c8aea3", // cyan vibrante (destaque tech)
+            background: "#ffffff",
+            text: "#1f2937",
+            title: "#2563eb", // cor dos títulos (igual ao primary)
+            // Cores para componentes específicos
+            header: {
+                bg: "#1e293b", // fundo do header
+                text: "#ffffff", // texto do header
+            },
+            footer: {
+                bg: "#0f172a", // fundo do footer
+                text: "#ffffff", // texto do footer
+            },
+            cards: {
+                bg: "#1e40af", // fundo dos cards
+                text: "#ffffff", // texto dos cards
+                border: "#1e40af", // borda dos cards
+            },
+        },
+        dark: {
+            primary: "#3b82f6", // azul mais claro para dark mode
+            secondary: "#1e293b", // slate ainda mais escuro
+            accent: "#06b6d4", // cyan ajustado para dark
+            background: "#0f172a",
+            text: "#e2e8f0",
+            title: "#3b82f6", // cor dos títulos no dark mode (igual ao primary)
+            // Cores para componentes específicos
+            header: {
+                bg: "#0f172a", // fundo do header dark
+                text: "#e2e8f0", // texto do header dark
+            },
+            footer: {
+                bg: "#020617", // fundo do footer dark
+                text: "#e2e8f0", // texto do footer dark
+            },
+            cards: {
+                bg: "#1e293b", // fundo dos cards dark
+                text: "#e2e8f0", // texto dos cards dark
+                border: "#334155", // borda dos cards dark
+            },
+        },
     },
 };

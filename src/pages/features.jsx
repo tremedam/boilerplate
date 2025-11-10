@@ -2,10 +2,12 @@ import { projectData } from "@/data/projectData";
 import ProjectLayout from "@/components/Project/ProjectLayout";
 import Cards from "@/components/Project/Cards";
 import { useState } from "react";
+import { useThemeColors } from "@/hooks/useThemeColors";
 
 export default function FeaturesPage() {
     const { features, header, footer, theme } = projectData;
     const [expandedCard, setExpandedCard] = useState(null);
+    const { colors } = useThemeColors();
 
     return (
         <ProjectLayout
@@ -17,7 +19,8 @@ export default function FeaturesPage() {
         >
             <section className="py-16 max-w-6xl mx-auto px-4" id="features">
                 <h1
-                    className="text-4xl font-bold mb-8 text-blue-900 dark:text-blue-400"
+                    className="text-4xl font-bold mb-8 transition-colors duration-300"
+                    style={{ color: colors.title }}
                 >
                     {features.title || "Funcionalidades"}
                 </h1>

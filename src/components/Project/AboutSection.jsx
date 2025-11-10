@@ -1,6 +1,9 @@
 import Cards from "./Cards";
+import { useThemeColors } from "@/hooks/useThemeColors";
 
 export default function AboutSection({ data, theme }) {
+  const { colors } = useThemeColors();
+
   // Função para processar o conteúdo em seções
   const processSections = (text) => {
     const sections = [];
@@ -52,11 +55,12 @@ export default function AboutSection({ data, theme }) {
         {/* Cabeçalho */}
         <div className="text-center mb-16">
           <h2
-            className="text-4xl md:text-5xl font-bold mb-4 text-blue-900 dark:text-blue-400"
+            className="text-4xl md:text-5xl font-bold mb-4 transition-colors duration-300"
+            style={{ color: colors.title }}
           >
             {data.title}
           </h2>
-          <div className="w-24 h-1 mx-auto rounded-full bg-blue-500 dark:bg-blue-400"></div>
+          <div className="w-24 h-1 mx-auto rounded-full transition-colors duration-300" style={{ backgroundColor: colors.title }}></div>
         </div>
 
         <div className="grid lg:grid-cols-4 gap-8">
@@ -77,7 +81,7 @@ export default function AboutSection({ data, theme }) {
           {data.stats && (
             <div className="lg:col-span-1 space-y-6">
               <div className="sticky top-24">
-                <h3 className="text-2xl font-bold mb-6 text-center text-blue-900 dark:text-blue-400">
+                <h3 className="text-2xl font-bold mb-6 text-center transition-colors duration-300" style={{ color: colors.title }}>
                   📊 Números
                 </h3>
                 {data.stats.map((stat, index) => (

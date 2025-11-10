@@ -1,9 +1,15 @@
+import { useThemeColors } from "@/hooks/useThemeColors";
+
 export default function Footer({ data, theme }) {
+    const { colors } = useThemeColors();
+
     return (
         <footer
-            className="py-12 bg-gray-800 dark:bg-gray-900 text-white dark:text-gray-100 transition-colors duration-300"
+            className="py-12 transition-colors duration-300"
             style={{
-                borderTop: `3px solid ${theme.primary}`
+                backgroundColor: colors.footer.bg,
+                borderTop: `3px solid ${colors.primary}`,
+                color: colors.footer.text
             }}
         >
             <div className="max-w-7xl mx-auto px-4">
