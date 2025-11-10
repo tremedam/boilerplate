@@ -5,7 +5,10 @@ export default function Header({ data, theme }) {
   return (
     <header
       className="sticky top-0 z-50 bg-white shadow-md"
-      style={{ borderBottom: `3px solid ${theme.primary}` }}
+      style={{
+        borderBottom: `3px solid ${theme.primary}`,
+        backgroundColor: theme.secondary
+      }}
     >
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo e Título */}
@@ -27,7 +30,7 @@ export default function Header({ data, theme }) {
             >
               {data.title}
             </h1>
-            <p className="text-sm text-gray-600 hidden md:block">
+            <p className="text-sm text-gray-300 hidden md:block">
               {data.subtitle}
             </p>
           </div>
@@ -37,32 +40,32 @@ export default function Header({ data, theme }) {
         <nav className="hidden md:flex gap-6">
           <Link
             href="/project#about"
-            className="text-gray-700 hover:text-gray-900 transition"
+            className="text-gray-200 hover:text-white transition"
           >
             Sobre
           </Link>
           <Link
             href="/features"
-            className="text-gray-700 hover:text-gray-900 transition"
+            className="text-gray-200 hover:text-white transition"
           >
             Funcionalidades
           </Link>
           <Link
             href="/technologies"
-            className="text-gray-700 hover:text-gray-900 transition"
+            className="text-gray-200 hover:text-white transition"
           >
             Tecnologias
           </Link>
           <Link
             href="/team"
-            className="text-gray-700 hover:text-gray-900 transition"
+            className="text-gray-200 hover:text-white transition"
           >
             Equipe
           </Link>
         </nav>
 
         {/* Menu Mobile */}
-        <button className="md:hidden p-2">
+        <button className="md:hidden p-2 text-white">
           <svg
             className="w-6 h-6"
             fill="none"

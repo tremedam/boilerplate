@@ -24,8 +24,8 @@ export default function HeroSection({ data, theme }) {
                   key={index}
                   href={button.href}
                   className={`px-6 py-3 rounded-lg font-semibold transition shadow-lg ${button.primary
-                      ? "text-white hover:opacity-90"
-                      : "bg-white text-gray-800 hover:bg-gray-100"
+                    ? "text-white hover:opacity-90"
+                    : "bg-white text-gray-800 hover:bg-gray-100"
                     }`}
                   style={
                     button.primary
