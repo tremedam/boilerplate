@@ -4,10 +4,9 @@ import Link from "next/link";
 export default function Header({ data, theme }) {
   return (
     <header
-      className="sticky top-0 z-50 bg-white shadow-md"
+      className="sticky top-0 z-50 bg-gray-800 dark:bg-gray-900 shadow-md transition-colors duration-300"
       style={{
-        borderBottom: `3px solid ${theme.primary}`,
-        backgroundColor: theme.secondary
+        borderBottom: `3px solid ${theme.primary}`
       }}
     >
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -25,12 +24,11 @@ export default function Header({ data, theme }) {
           )}
           <div>
             <h1
-              className="text-xl md:text-2xl font-bold"
-              style={{ color: theme.primary }}
+              className="text-xl md:text-2xl font-bold text-white"
             >
               {data.title}
             </h1>
-            <p className="text-sm text-gray-300 hidden md:block">
+            <p className="text-sm text-gray-300 dark:text-gray-400 hidden md:block">
               {data.subtitle}
             </p>
           </div>
@@ -40,25 +38,25 @@ export default function Header({ data, theme }) {
         <nav className="hidden md:flex gap-6">
           <Link
             href="/project#about"
-            className="text-gray-200 hover:text-white transition"
+            className="text-gray-300 hover:text-white transition"
           >
             Sobre
           </Link>
           <Link
             href="/features"
-            className="text-gray-200 hover:text-white transition"
+            className="text-gray-300 hover:text-white transition"
           >
             Funcionalidades
           </Link>
           <Link
             href="/technologies"
-            className="text-gray-200 hover:text-white transition"
+            className="text-gray-300 hover:text-white transition"
           >
             Tecnologias
           </Link>
           <Link
             href="/team"
-            className="text-gray-200 hover:text-white transition"
+            className="text-gray-300 hover:text-white transition"
           >
             Equipe
           </Link>

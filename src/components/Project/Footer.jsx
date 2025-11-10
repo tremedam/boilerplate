@@ -1,9 +1,8 @@
 export default function Footer({ data, theme }) {
     return (
         <footer
-            className="py-12 text-white"
+            className="py-12 bg-gray-800 dark:bg-gray-900 text-white dark:text-gray-100 transition-colors duration-300"
             style={{
-                backgroundColor: theme.secondary,
                 borderTop: `3px solid ${theme.primary}`
             }}
         >

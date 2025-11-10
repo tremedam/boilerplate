@@ -8,11 +8,7 @@ export default function Cards({ title, icon, content, theme, image, bgColor, isE
   const controlled = isExpanded !== undefined && onToggle !== undefined;
   const expanded = controlled ? isExpanded : internalExpanded;
 
-  const backgroundColor = bgColor || theme.secondary;
   const isWhiteBg = bgColor === "#ffffff" || bgColor === "white";
-  const textColor = isWhiteBg ? "text-gray-800" : "text-white";
-  const subtitleColor = isWhiteBg ? "text-gray-500" : "text-gray-200";
-  const contentColor = isWhiteBg ? "text-gray-700" : "text-white";
 
   const handleClick = () => {
     if (controlled) {
@@ -24,16 +20,19 @@ export default function Cards({ title, icon, content, theme, image, bgColor, isE
 
   return (
     <div
-      className={`rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 cursor-pointer ${expanded ? "scale-105" : "hover:scale-[1.02]"
+      className={`rounded-xl shadow-lg dark:shadow-2xl overflow-hidden transform transition-all duration-500 cursor-pointer ${expanded ? "scale-105" : "hover:scale-[1.02]"
+        } ${isWhiteBg
+          ? "bg-white dark:bg-gray-700"
+          : "bg-blue-900 dark:bg-gray-800"
         }`}
-      style={{ backgroundColor }}
       onClick={handleClick}
     >
       {icon && typeof icon === "string" && icon !== "" ? (
         // Layout com ícone lateral
         <div className="md:flex">
           {/* Ícone lateral */}
-          <div className={`md:w-32 flex items-center justify-center p-8 ${isWhiteBg ? 'text-gray-800' : 'text-white'}`}>
+          <div className={`md:w-32 flex items-center justify-center p-8 ${isWhiteBg ? 'text-gray-800 dark:text-gray-200' : 'text-white'
+            }`}>
             {icon.endsWith(".svg") || icon.startsWith("/images") ? (
               <Image src={icon} alt={title} width={64} height={64} className="object-contain" />
             ) : (
@@ -43,16 +42,19 @@ export default function Cards({ title, icon, content, theme, image, bgColor, isE
 
           {/* Conteúdo */}
           <div className="flex-1 p-6 md:p-8">
-            <h3 className={`text-2xl font-bold mb-4 flex items-center justify-between ${textColor}`}>
+            <h3 className={`text-2xl font-bold mb-4 flex items-center justify-between ${isWhiteBg ? 'text-gray-800 dark:text-gray-100' : 'text-white'
+              }`}>
               {title}
-              <span className={`text-sm ml-2 ${subtitleColor}`}>
+              <span className={`text-sm ml-2 ${isWhiteBg ? 'text-gray-500 dark:text-gray-400' : 'text-gray-200 dark:text-gray-300'
+                }`}>
                 {expanded ? "▲" : "▼"}
               </span>
             </h3>
 
             {/* Conteúdo com animação - só aparece quando expandido */}
             {expanded && (
-              <div className={`${contentColor} leading-relaxed transition-all duration-500 animate-fadeIn`}>
+              <div className={`${isWhiteBg ? 'text-gray-700 dark:text-gray-300' : 'text-white dark:text-gray-100'
+                } leading-relaxed transition-all duration-500 animate-fadeIn`}>
                 {content}
 
                 {/* Imagem (aparece apenas quando expandido) */}
@@ -73,16 +75,19 @@ export default function Cards({ title, icon, content, theme, image, bgColor, isE
       ) : (
         // Layout sem ícone (centralizado)
         <div className="p-6 md:p-8">
-          <h3 className={`text-2xl font-bold mb-4 text-center ${textColor}`}>
+          <h3 className={`text-2xl font-bold mb-4 text-center ${isWhiteBg ? 'text-gray-800 dark:text-gray-100' : 'text-white'
+            }`}>
             {title}
-            <span className={`text-sm ml-2 ${subtitleColor}`}>
+            <span className={`text-sm ml-2 ${isWhiteBg ? 'text-gray-500 dark:text-gray-400' : 'text-gray-200 dark:text-gray-300'
+              }`}>
               {expanded ? "▲" : "▼"}
             </span>
           </h3>
 
           {/* Conteúdo com animação - só aparece quando expandido */}
           {expanded && (
-            <div className={`${contentColor} leading-relaxed transition-all duration-500 animate-fadeIn`}>
+            <div className={`${isWhiteBg ? 'text-gray-700 dark:text-gray-300' : 'text-white dark:text-gray-100'
+              } leading-relaxed transition-all duration-500 animate-fadeIn`}>
               {content}
 
               {/* Imagem (aparece apenas quando expandido) */}

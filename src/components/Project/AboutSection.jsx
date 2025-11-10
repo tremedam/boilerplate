@@ -47,17 +47,16 @@ export default function AboutSection({ data, theme }) {
   const sections = processSections(data.content);
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="about" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4">
         {/* Cabeçalho */}
         <div className="text-center mb-16">
           <h2
-            className="text-4xl md:text-5xl font-bold mb-4"
-            style={{ color: theme.primary }}
+            className="text-4xl md:text-5xl font-bold mb-4 text-blue-900 dark:text-blue-400"
           >
             {data.title}
           </h2>
-          <div className="w-24 h-1 mx-auto rounded-full" style={{ backgroundColor: theme.accent }}></div>
+          <div className="w-24 h-1 mx-auto rounded-full bg-blue-500 dark:bg-blue-400"></div>
         </div>
 
         <div className="grid lg:grid-cols-4 gap-8">
@@ -78,14 +77,13 @@ export default function AboutSection({ data, theme }) {
           {data.stats && (
             <div className="lg:col-span-1 space-y-6">
               <div className="sticky top-24">
-                <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: theme.primary }}>
+                <h3 className="text-2xl font-bold mb-6 text-center text-blue-900 dark:text-blue-400">
                   📊 Números
                 </h3>
                 {data.stats.map((stat, index) => (
                   <div
                     key={index}
-                    className="text-center p-6 rounded-xl shadow-lg border-l-4 transform hover:scale-105 transition-transform duration-200 mb-4"
-                    style={{ backgroundColor: theme.secondary, borderColor: theme.accent }}
+                    className="text-center p-6 rounded-xl shadow-lg border-l-4 transform hover:scale-105 transition-transform duration-200 mb-4 bg-blue-900 dark:bg-gray-700 border-blue-500 dark:border-blue-400"
                   >
                     <div
                       className="text-4xl font-bold mb-2 text-white"

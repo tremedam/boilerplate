@@ -14,8 +14,7 @@ export default function TeamPage() {
         >
             <section className="py-16 max-w-6xl mx-auto px-4" id="team">
                 <h1
-                    className="text-4xl font-bold mb-8"
-                    style={{ color: theme.primary }}
+                    className="text-4xl font-bold mb-8 text-blue-900 dark:text-blue-400"
                 >
                     {team.title || "Equipe do Projeto"}
                 </h1>
@@ -23,8 +22,7 @@ export default function TeamPage() {
                     {team.members?.map((m, idx) => (
                         <div
                             key={idx}
-                            className="p-6 rounded-lg shadow-sm border text-center"
-                            style={{ backgroundColor: theme.secondary, borderColor: theme.secondary }}
+                            className="p-6 rounded-lg shadow-sm border text-center bg-blue-900 dark:bg-gray-700 border-blue-900 dark:border-gray-600 transition-colors duration-300"
                         >
                             <div className="relative w-28 h-28 mx-auto mb-4">
                                 <Image
@@ -35,7 +33,7 @@ export default function TeamPage() {
                                 />
                             </div>
                             <h2 className="text-lg font-semibold text-white">{m.name}</h2>
-                            <p className="text-gray-200 text-sm mb-3">{m.role}</p>
+                            <p className="text-gray-200 dark:text-gray-300 text-sm mb-3">{m.role}</p>
                             <div className="flex justify-center gap-4 text-sm">
                                 {m.github && (
                                     <a
@@ -63,11 +61,10 @@ export default function TeamPage() {
                 </div>
 
                 {team.advisor && (
-                    <div className="mt-12 p-6 rounded-lg border"
-                        style={{ backgroundColor: theme.secondary, borderColor: theme.secondary }}
+                    <div className="mt-12 p-6 rounded-lg border bg-blue-900 dark:bg-gray-700 border-blue-900 dark:border-gray-600 transition-colors duration-300"
                     >
                         <h3 className="text-xl font-semibold mb-2 text-white">Orientador</h3>
-                        <p className="text-gray-200">
+                        <p className="text-gray-200 dark:text-gray-300">
                             {team.advisor.name} — {team.advisor.role}
                         </p>
                         {team.advisor.email && (

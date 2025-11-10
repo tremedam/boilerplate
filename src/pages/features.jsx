@@ -17,8 +17,7 @@ export default function FeaturesPage() {
         >
             <section className="py-16 max-w-6xl mx-auto px-4" id="features">
                 <h1
-                    className="text-4xl font-bold mb-8"
-                    style={{ color: theme.primary }}
+                    className="text-4xl font-bold mb-8 text-blue-900 dark:text-blue-400"
                 >
                     {features.title || "Funcionalidades"}
                 </h1>
