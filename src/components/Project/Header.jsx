@@ -63,6 +63,20 @@ export default function Header({ data, theme }) {
             Tecnologias
           </Link>
           <Link
+            href="/gallery"
+            className="transition hover:opacity-80"
+            style={{ color: colors.header.text, opacity: 0.9 }}
+          >
+            Galeria
+          </Link>
+          <Link
+            href="/results"
+            className="transition hover:opacity-80"
+            style={{ color: colors.header.text, opacity: 0.9 }}
+          >
+            Resultados
+          </Link>
+          <Link
             href="/team"
             className="transition hover:opacity-80"
             style={{ color: colors.header.text, opacity: 0.9 }}

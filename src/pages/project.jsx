@@ -87,6 +87,75 @@ export default function Project() {
                     </div>
                 </section>
 
+                {/* Preview Galeria */}
+                <section className="py-12 transition-colors duration-300" style={{ backgroundColor: colors.background }}>
+                    <div className="max-w-6xl mx-auto px-4">
+                        <h2 className="text-3xl font-bold mb-6 transition-colors duration-300" style={{ color: colors.title }}>
+                            Galeria
+                        </h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {projectData.gallery.images.slice(0, 3).map((image, idx) => (
+                                <div
+                                    key={idx}
+                                    className="rounded-md shadow-sm transition-all duration-300 overflow-hidden hover:scale-105"
+                                    style={{
+                                        backgroundColor: colors.cards.bg,
+                                        borderColor: colors.cards.border,
+                                        borderWidth: '1px',
+                                        borderStyle: 'solid'
+                                    }}
+                                >
+                                    <div className="aspect-video bg-gray-200 dark:bg-gray-700 overflow-hidden">
+                                        <img
+                                            src={image.src}
+                                            alt={image.caption}
+                                            className="w-full h-full object-cover"
+                                            style={{ objectFit: 'cover' }}
+                                        />
+                                    </div>
+                                    <div className="p-4">
+                                        <p className="text-xs text-center" style={{ color: colors.cards.text }}>{image.caption}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <Link href="/gallery" className="inline-block mt-6 text-sm font-medium hover:underline transition-colors duration-300" style={{ color: colors.primary }}>
+                            Ver galeria completa →
+                        </Link>
+                    </div>
+                </section>
+
+                {/* Preview Resultados */}
+                <section className="py-12 transition-colors duration-300" style={{ backgroundColor: colors.background }}>
+                    <div className="max-w-6xl mx-auto px-4">
+                        <h2 className="text-3xl font-bold mb-6 transition-colors duration-300" style={{ color: colors.title }}>
+                            Resultados Alcançados
+                        </h2>
+                        <p className="text-center mb-6 transition-colors duration-300" style={{ color: colors.text }}>
+                            {projectData.results.content}
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {projectData.results.achievements.slice(0, 3).map((achievement, idx) => (
+                                <div
+                                    key={idx}
+                                    className="p-4 rounded-md shadow-sm transition-all duration-300"
+                                    style={{
+                                        backgroundColor: colors.cards.bg,
+                                        borderColor: colors.cards.border,
+                                        borderWidth: '1px',
+                                        borderStyle: 'solid'
+                                    }}
+                                >
+                                    <p className="text-xs" style={{ color: colors.cards.text }}>{achievement}</p>
+                                </div>
+                            ))}
+                        </div>
+                        <Link href="/results" className="inline-block mt-6 text-sm font-medium hover:underline transition-colors duration-300" style={{ color: colors.primary }}>
+                            Ver todos os resultados →
+                        </Link>
+                    </div>
+                </section>
+
                 {/* Preview Equipe */}
                 <section className="py-12 transition-colors duration-300" style={{ backgroundColor: colors.background }}>
                     <div className="max-w-6xl mx-auto px-4">

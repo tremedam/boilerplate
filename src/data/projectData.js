@@ -155,31 +155,12 @@ export const projectData = {
         ],
     },
 
-    // Equipe
-    team: {
-        title: "Desenvolvedor",
-        members: [
-            {
-                name: "Thiago F.S Dias",
-                role: "Aspirante a Full-Stack Developer",
-                image: "/images/team/thiago.jpg",
-                github: "https://github.com/tremedam",
-                linkedin: "https://www.linkedin.com/in/thiago-fellipe-28471a26a/",
-            },
-        ],
-        advisor: {
-            name: "Projeto Individual",
-            role: "Trabalho Acadêmico Autônomo",
-            email: "thiagofellipe055@gmail.com",
-        },
-    },
-
     // Galeria / Screenshots
     gallery: {
         title: "Capturas de Tela do Template",
         images: [
             {
-                src: "/images/screenshots/home.jpg",
+                src: "/images/screenshots/home.png",
                 caption: "Página principal com Hero Section e seções de preview",
             },
             {
@@ -222,6 +203,25 @@ export const projectData = {
             "Código versionado no GitHub com licença MIT (open-source)",
             "Transições suaves e animações para melhor experiência do usuário",
         ],
+    },
+
+    // Equipe
+    team: {
+        title: "Desenvolvedor",
+        members: [
+            {
+                name: "Thiago F.S Dias",
+                role: "Aspirante a Full-Stack Developer",
+                image: "/images/team/thiago.jpg",
+                github: "https://github.com/tremedam",
+                linkedin: "https://www.linkedin.com/in/thiago-fellipe-28471a26a/",
+            },
+        ],
+        advisor: {
+            name: "Projeto Individual",
+            role: "Trabalho Acadêmico Autônomo",
+            email: "thiagofellipe055@gmail.com",
+        },
     },
 
     // Rodapé
