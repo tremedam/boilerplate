@@ -1,3 +1,5 @@
+import Cards from "./Cards";
+
 export default function AboutSection({ data, theme }) {
   // Ícones/emojis para cada seção
   const sectionIcons = {
@@ -30,14 +32,14 @@ export default function AboutSection({ data, theme }) {
               {items.map((item, i) => (
                 <li key={i} className="flex items-start">
                   <span className="text-blue-500 mr-3 mt-1 text-lg">▸</span>
-                  <span className="text-gray-700">{item.trim()}</span>
+                  <span>{item.trim()}</span>
                 </li>
               ))}
             </ul>
           );
         } else {
           processedContent = (
-            <p className="text-gray-700 leading-relaxed mt-4">{content}</p>
+            <p className="mt-4">{content}</p>
           );
         }
 
@@ -72,31 +74,13 @@ export default function AboutSection({ data, theme }) {
           {/* Cards de conteúdo - 3 colunas */}
           <div className="lg:col-span-3 space-y-6">
             {sections.map((section, idx) => (
-              <div
+              <Cards
                 key={idx}
-                className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-all duration-300"
-              >
-                <div className="md:flex">
-                  {/* Ícone lateral */}
-                  <div
-                    className="md:w-32 flex items-center justify-center p-8 text-6xl"
-                    style={{ background: `linear-gradient(135deg, ${theme.primary}15, ${theme.secondary}15)` }}
-                  >
-                    {section.icon}
-                  </div>
-
-                  {/* Conteúdo */}
-                  <div className="flex-1 p-6 md:p-8">
-                    <h3
-                      className="text-2xl font-bold mb-4 flex items-center"
-                      style={{ color: theme.primary }}
-                    >
-                      {section.title}
-                    </h3>
-                    {section.content}
-                  </div>
-                </div>
-              </div>
+                title={section.title}
+                icon={section.icon}
+                content={section.content}
+                theme={theme}
+              />
             ))}
           </div>
 
