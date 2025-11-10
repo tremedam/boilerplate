@@ -1,16 +1,6 @@
 import Cards from "./Cards";
 
 export default function AboutSection({ data, theme }) {
-  // Ícones/emojis para cada seção
-  const sectionIcons = {
-    'Visão Geral': '🎯',
-    'Contexto e Motivação': '💡',
-    'Objetivo Principal': '🚀',
-    'Metodologia de Desenvolvimento': '⚙️',
-    'Diferenciais Técnicos': '⭐',
-    'Aplicabilidade': '📚',
-  };
-
   // Função para processar o conteúdo em seções
   const processSections = (text) => {
     const sections = [];
@@ -45,7 +35,7 @@ export default function AboutSection({ data, theme }) {
 
         sections.push({
           title,
-          icon: sectionIcons[title] || '📌',
+          icon: "",
           content: processedContent
         });
       }
