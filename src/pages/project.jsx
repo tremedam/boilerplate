@@ -32,10 +32,10 @@ export default function Project() {
                         </h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {projectData.features.items.slice(0, 4).map((f, idx) => (
-                                <div key={idx} className="p-4 rounded-md shadow-sm border bg-white" style={{ borderColor: projectData.theme.secondary + '22' }}>
+                                <div key={idx} className="p-4 rounded-md shadow-sm border" style={{ backgroundColor: projectData.theme.secondary, borderColor: projectData.theme.secondary }}>
                                     <div className="text-2xl mb-2">{f.icon}</div>
-                                    <h3 className="font-semibold text-sm mb-1">{f.title}</h3>
-                                    <p className="text-gray-600 text-xs">{f.description}</p>
+                                    <h3 className="font-semibold text-sm mb-1 text-white">{f.title}</h3>
+                                    <p className="text-gray-200 text-xs">{f.description}</p>
                                 </div>
                             ))}
                         </div>
@@ -53,9 +53,9 @@ export default function Project() {
                         </h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                             {projectData.technologies.items.slice(0, 4).map((t, idx) => (
-                                <div key={idx} className="p-4 rounded-md shadow-sm border bg-white text-center" style={{ borderColor: projectData.theme.secondary + '22' }}>
-                                    <p className="font-semibold text-sm mb-1">{t.name}</p>
-                                    <p className="text-gray-600 text-xs">{t.description}</p>
+                                <div key={idx} className="p-4 rounded-md shadow-sm border text-center" style={{ backgroundColor: projectData.theme.secondary, borderColor: projectData.theme.secondary }}>
+                                    <p className="font-semibold text-sm mb-1 text-white">{t.name}</p>
+                                    <p className="text-gray-200 text-xs">{t.description}</p>
                                 </div>
                             ))}
                         </div>
@@ -73,10 +73,10 @@ export default function Project() {
                         </h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                             {projectData.team.members.slice(0, 3).map((m, idx) => (
-                                <div key={idx} className="p-6 rounded-lg shadow-sm border bg-white text-center" style={{ borderColor: projectData.theme.secondary + '22' }}>
+                                <div key={idx} className="p-6 rounded-lg shadow-sm border text-center" style={{ backgroundColor: projectData.theme.secondary, borderColor: projectData.theme.secondary }}>
                                     <img src={m.image} alt={m.name} className="w-24 h-24 rounded-full object-cover mx-auto mb-4" />
-                                    <h3 className="text-md font-semibold">{m.name}</h3>
-                                    <p className="text-gray-600 text-xs mb-2">{m.role}</p>
+                                    <h3 className="text-md font-semibold text-white">{m.name}</h3>
+                                    <p className="text-gray-200 text-xs mb-2">{m.role}</p>
                                 </div>
                             ))}
                         </div>

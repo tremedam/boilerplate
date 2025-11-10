@@ -216,9 +216,9 @@ export const projectData = {
 
     // Configuração de Cores
     theme: {
-        primary: "#0a47c9ff", // azul
-        secondary: "#7c3aed", // roxo
-        accent: "#f59e0b", // laranja
+        primary: "#2563eb ", // azul tech (Next.js inspired)
+        secondary: "#0f172a", // slate escuro (moderno/tech)
+        accent: "#09c8aea3", // cyan vibrante (destaque tech)
         background: "#ffffff",
         text: "#1f2937",
     },

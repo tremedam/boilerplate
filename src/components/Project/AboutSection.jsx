@@ -94,16 +94,15 @@ export default function AboutSection({ data, theme }) {
                 {data.stats.map((stat, index) => (
                   <div
                     key={index}
-                    className="bg-white text-center p-6 rounded-xl shadow-lg border-l-4 transform hover:scale-105 transition-transform duration-200 mb-4"
-                    style={{ borderColor: theme.primary }}
+                    className="text-center p-6 rounded-xl shadow-lg border-l-4 transform hover:scale-105 transition-transform duration-200 mb-4"
+                    style={{ backgroundColor: theme.secondary, borderColor: theme.accent }}
                   >
                     <div
-                      className="text-4xl font-bold mb-2"
-                      style={{ color: theme.primary }}
+                      className="text-4xl font-bold mb-2 text-white"
                     >
                       {stat.value}
                     </div>
-                    <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">
+                    <div className="text-sm font-medium text-gray-200 uppercase tracking-wide">
                       {stat.label}
                     </div>
                   </div>
