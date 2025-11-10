@@ -144,7 +144,7 @@ export const projectData = {
         members: [
             {
                 name: "Thiago F.S Dias",
-                role: "Desenvolvedor Full-Stack & Designer",
+                role: "Aspirante a Full-Stack Developer",
                 image: "/images/team/thiago.jpg",
                 github: "https://github.com/tremedam",
                 linkedin: "https://www.linkedin.com/in/thiago-fellipe-28471a26a/",
@@ -153,7 +153,7 @@ export const projectData = {
         advisor: {
             name: "Projeto Individual",
             role: "Trabalho Acadêmico Autônomo",
-            email: "contato@thiagodias.dev",
+            email: "thiagofellipe055@gmail.com",
         },
     },
 

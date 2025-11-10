@@ -1,9 +1,13 @@
 import Image from "next/image";
 import { projectData } from "@/data/projectData";
 import ProjectLayout from "@/components/Project/ProjectLayout";
+import Cards from "@/components/Project/Cards";
+import { useState } from "react";
 
 export default function TechnologiesPage() {
     const { technologies, header, footer, theme } = projectData;
+    const [expandedCard, setExpandedCard] = useState(null);
+
     return (
         <ProjectLayout
             headerData={header}
@@ -19,29 +23,22 @@ export default function TechnologiesPage() {
                 >
                     {technologies.title || "Tecnologias Utilizadas"}
                 </h1>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
                     {technologies.items?.map((t, idx) => (
-                        <div
+                        <Cards
                             key={idx}
-                            className="p-6 rounded-lg shadow-sm border bg-white flex flex-col"
-                            style={{ borderColor: theme.secondary + '22' }}
-                        >
-                            <div className="h-32 flex items-center justify-center mb-4 relative">
-                                {t.image ? (
-                                    <Image
-                                        src={t.image}
-                                        alt={t.name}
-                                        width={112}
-                                        height={112}
-                                        className="object-contain"
-                                    />
-                                ) : (
-                                    <span className="text-4xl">🛠️</span>
-                                )}
-                            </div>
-                            <h2 className="text-lg font-semibold mb-1">{t.name}</h2>
-                            <p className="text-gray-600 text-sm leading-relaxed">{t.description}</p>
-                        </div>
+                            title={t.name}
+                            icon={t.image || "💻"}
+                            content={
+                                <div>
+                                    <p className="text-sm leading-relaxed">{t.description}</p>
+                                </div>
+                            }
+                            theme={theme}
+                            bgColor="#ffffff"
+                            isExpanded={expandedCard === idx}
+                            onToggle={() => setExpandedCard(expandedCard === idx ? null : idx)}
+                        />
                     ))}
                 </div>
             </section>
