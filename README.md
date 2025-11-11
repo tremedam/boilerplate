@@ -2,6 +2,11 @@
 
 Um template genérico e moderno criado em Next.js para apresentar projetos acadêmicos de forma bonita e organizada. Inclui **Dark Mode automático** com sistema de temas totalmente configurável, seções prontas (Hero, Sobre, Funcionalidades, Tecnologias, Galeria, Resultados e Equipe) com conteúdo centralizado em um único arquivo de dados.
 
+## 📖 Documentação
+
+- **[GUIA_DE_USO.md](GUIA_DE_USO.md)** — Tutorial completo passo a passo de como personalizar e usar o template
+- **[README.md](README.md)** — Documentação técnica e referência completa
+
 ## ✨ Destaques
 
 - 🌓 **Dark Mode Completo** — Alternância automática entre temas claro/escuro com persistência de preferência
@@ -24,6 +29,28 @@ Um template genérico e moderno criado em Next.js para apresentar projetos acad�
 Requisitos de ambiente:
 - Node.js 18.17+ ou 20+ (recomendado LTS)
 - npm (ou pnpm/yarn, se preferir)
+
+## 🎯 Início Rápido
+
+Para começar a usar este template:
+
+1. **Instale as dependências:**
+   ```powershell
+   npm install
+   ```
+
+2. **Rode em desenvolvimento:**
+   ```powershell
+   npm run dev
+   ```
+
+3. **Personalize o conteúdo:**
+   - Edite `src/data/projectData.js` com as informações do seu projeto
+   - Adicione suas imagens em `public/images/`
+   - Configure as cores do tema (light/dark mode)
+
+4. **Consulte o guia completo:**
+   - Veja [GUIA_DE_USO.md](GUIA_DE_USO.md) para tutorial passo a passo
 
 ## 🗂️ Estrutura do projeto
 
@@ -64,6 +91,8 @@ boilerplate/
 │  │  └─ team.jsx           # Página dedicada: Equipe
 │  └─ styles/
 │     └─ globals.css        # Estilos globais + transições dark mode
+├─ GUIA_DE_USO.md           # Tutorial completo de personalização
+├─ README.md                # Este arquivo - documentação técnica
 ├─ jsconfig.json            # Atalho @ para ./src
 ├─ next.config.js
 ├─ package.json
@@ -101,6 +130,8 @@ O projeto possui as seguintes páginas:
 A navegação no Header inclui todas as rotas e se adapta ao tema ativo.
 
 ## 🧩 Como personalizar o conteúdo
+
+> **💡 Dica:** Para um guia detalhado passo a passo, consulte [GUIA_DE_USO.md](GUIA_DE_USO.md)
 
 Edite apenas `src/data/projectData.js`. Todas as páginas lêem deste arquivo:
 
@@ -283,10 +314,13 @@ npm run build
 npm run start
 ```
 
-Dicas de deploy:
-- **Vercel** (recomendado para Next.js): apenas importe o repositório.
-- **Docker**: crie uma imagem que execute `npm run build` e `npm run start`.
-- **Outras plataformas Node** (Railway, Render, etc.): defina o comando de start como `npm run start`.
+**Dicas de deploy:**
+- **Vercel** (recomendado para Next.js): apenas importe o repositório
+- **Netlify**: conecte com GitHub para deploy automático
+- **Docker**: crie uma imagem que execute `npm run build` e `npm run start`
+- **Outras plataformas Node** (Railway, Render, etc.): defina o comando de start como `npm run start`
+
+> **📖 Guia de Deploy:** Veja instruções detalhadas de deploy em [GUIA_DE_USO.md](GUIA_DE_USO.md#-deploy-e-publicação)
 
 ## 🎨 Estilos
 
@@ -438,12 +472,38 @@ Contribuições são bem-vindas! Sinta-se à vontade para:
 4. Push para a branch (`git push origin feature/MinhaFeature`)
 5. Abrir um Pull Request
 
-## 📧 Contato
+## � Recursos Adicionais
+
+- **[GUIA_DE_USO.md](GUIA_DE_USO.md)** — Tutorial completo passo a passo
+- **[Next.js Documentation](https://nextjs.org/docs)** — Documentação oficial do Next.js
+- **[Tailwind CSS](https://tailwindcss.com/docs)** — Documentação do Tailwind
+- **[next-themes](https://github.com/pacocoursey/next-themes)** — Biblioteca de temas
+
+##  Contato
 
 Para dúvidas ou sugestões:
 - GitHub: [@tremedam](https://github.com/tremedam)
 - Email: thiagofellipe055@gmail.com
 
+## 🆘 Precisa de Ajuda?
+
+Se você está tendo dificuldades para personalizar ou usar o template:
+
+1. **Consulte o guia completo:** [GUIA_DE_USO.md](GUIA_DE_USO.md) tem instruções detalhadas passo a passo
+2. **Verifique a seção de problemas comuns:** O guia inclui solução de erros frequentes
+3. **Abra uma issue:** [GitHub Issues](https://github.com/tremedam/boilerplate/issues)
+4. **Entre em contato:** Use os canais acima para suporte direto
+
 ---
 
-Feito para acelerar a apresentação do seu projeto acadêmico. Edite o `projectData.js`, personalize as cores do tema, adicione imagens em `public/images/` e publique! 🎓✨
+**Desenvolvido com ❤️ para acelerar a apresentação do seu projeto acadêmico.**
+
+🎯 **Próximos passos:**
+1. Leia o [GUIA_DE_USO.md](GUIA_DE_USO.md) completo
+2. Edite o `projectData.js` com as informações do seu projeto
+3. Personalize as 14+ cores do tema light/dark
+4. Adicione suas imagens em `public/images/`
+5. Teste localmente com `npm run dev`
+6. Publique no Vercel ou Netlify
+
+🎓✨ Boa sorte com seu projeto acadêmico!
