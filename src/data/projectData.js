@@ -61,7 +61,7 @@ export const projectData = {
     `,
         stats: [
             { label: "Tempo de Desenvolvimento", value: "4 semanas" },
-            { label: "Tecnologias", value: "7" },
+            { label: "Tecnologias", value: "16" },
             { label: "Componentes", value: "8" },
         ],
     },
@@ -115,47 +115,129 @@ export const projectData = {
 
     // Tecnologias
     technologies: {
-        title: "Tecnologias Utilizadas",
-        items: [
-            {
-                name: "Next.js 14",
-                description: "Framework React para aplicações web modernas com SSR e SSG",
-                image: "/images/tech/nextjs.svg",
-            },
-            {
-                name: "React 18",
-                description: "Biblioteca JavaScript para construção de interfaces de usuário",
-                image: "/images/tech/react.svg",
-            },
-            {
-                name: "Tailwind CSS 3",
-                description: "Framework CSS utility-first para estilização rápida e responsiva com dark mode",
-                image: "/images/tech/tailwind.svg",
-            },
-            {
-                name: "next-themes",
-                description: "Biblioteca para gerenciamento de temas com persistência e SSR support",
-                image: "/images/tech/nextjs.svg",
-            },
-            {
-                name: "JavaScript (ES6+)",
-                description: "Linguagem de programação moderna com recursos avançados e hooks",
-                image: "/images/tech/javascript.svg",
-            },
-            {
-                name: "Git & GitHub",
-                description: "Controle de versão e hospedagem de código-fonte",
-                image: "/images/tech/github.svg",
-            },
-            {
-                name: "Vercel",
-                description: "Plataforma de deploy otimizada para projetos Next.js",
-                image: "/images/tech/vercel.svg",
-            },
-        ],
-    },
+        title: "Stack Tecnológico",
+        subtitle: "Tecnologias, ferramentas e plataformas utilizadas no desenvolvimento",
 
-    // Galeria / Screenshots
+        // Linguagens de Programação
+        languages: {
+            title: "Linguagens de Programação",
+            description: "Linguagens utilizadas no desenvolvimento do projeto",
+            items: [
+                {
+                    name: "JavaScript (ES6+)",
+                    description: "Linguagem de programação moderna com recursos avançados, hooks e programação funcional",
+                    image: "/images/tech/javascript.svg",
+                },
+                {
+                    name: "HTML5",
+                    description: "Linguagem de marcação para estruturação do conteúdo web",
+                    image: "/images/tech/html.svg",
+                },
+                {
+                    name: "CSS3",
+                    description: "Linguagem de estilização para design e layout responsivo",
+                    image: "/images/tech/css.svg",
+                },
+            ],
+        },
+
+        // Frameworks
+        frameworks: {
+            title: "Frameworks",
+            description: "Estruturas robustas que guiam a arquitetura e desenvolvimento",
+            items: [
+                {
+                    name: "Next.js 14",
+                    description: "Framework React para aplicações web modernas com SSR, SSG e otimização automática",
+                    image: "/images/tech/nextjs.svg",
+                },
+                {
+                    name: "React 18",
+                    description: "Biblioteca JavaScript para construção de interfaces de usuário com componentes reutilizáveis",
+                    image: "/images/tech/react.svg",
+                },
+                {
+                    name: "Tailwind CSS 3",
+                    description: "Framework CSS utility-first para estilização rápida, responsiva e com suporte a dark mode",
+                    image: "/images/tech/tailwind.svg",
+                },
+            ],
+        },
+
+        // Bibliotecas
+        libraries: {
+            title: "Bibliotecas",
+            description: "Pacotes e módulos que estendem as funcionalidades do projeto",
+            items: [
+                {
+                    name: "next-themes",
+                    description: "Biblioteca para gerenciamento de temas com persistência, SSR support e alternância light/dark",
+                    image: "/images/tech/nextjs.svg",
+                },
+                {
+                    name: "PostCSS",
+                    description: "Ferramenta para transformar CSS com JavaScript, usado pelo Tailwind",
+                    image: "/images/tech/postcss.svg",
+                },
+                {
+                    name: "Autoprefixer",
+                    description: "Plugin PostCSS para adicionar prefixos de navegadores automaticamente",
+                    image: "/images/tech/autoprefixer.svg",
+                },
+            ],
+        },
+
+        // Ferramentas de Desenvolvimento
+        tools: {
+            title: "Ferramentas de Desenvolvimento",
+            description: "Ferramentas essenciais para desenvolvimento, versionamento e produtividade",
+            items: [
+                {
+                    name: "Node.js 20",
+                    description: "Ambiente de execução JavaScript para desenvolvimento, build e execução do servidor Next.js",
+                    image: "/images/tech/nodejs.svg",
+                },
+                {
+                    name: "npm",
+                    description: "Gerenciador de pacotes para instalação e controle de dependências do projeto",
+                    image: "/images/tech/npm.svg",
+                },
+                {
+                    name: "Git",
+                    description: "Sistema de controle de versão distribuído para rastreamento de mudanças no código",
+                    image: "/images/tech/git.svg",
+                },
+                {
+                    name: "VS Code",
+                    description: "Editor de código moderno com extensões, IntelliSense e integração Git",
+                    image: "/images/tech/vscode.svg",
+                },
+                {
+                    name: "ESLint",
+                    description: "Ferramenta de linting para identificar e corrigir problemas no código JavaScript",
+                    image: "/images/tech/eslint.svg",
+                },
+            ],
+        },
+
+        // Plataformas e Deploy
+        platforms: {
+            title: "Plataformas e Deploy",
+            description: "Serviços de hospedagem, deploy e controle de versão",
+            items: [
+                {
+                    name: "Vercel",
+                    description: "Plataforma de deploy otimizada para projetos Next.js com CI/CD automático e edge network",
+                    image: "/images/tech/vercel.svg",
+                },
+                {
+                    name: "GitHub",
+                    description: "Plataforma de hospedagem de código-fonte com versionamento, colaboração e GitHub Actions",
+                    image: "/images/tech/github.svg",
+                },
+            ],
+        },
+    },    // Galeria / Screenshots
     gallery: {
         title: "Capturas de Tela do Template",
         images: [

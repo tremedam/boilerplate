@@ -29,6 +29,8 @@ Antes de começar, certifique-se de ter instalado:
   - Verifique: `npm --version`
 - **Editor de código** (VS Code recomendado)
 
+> **💡 Nota:** Não é necessário instalar Next.js, React, Tailwind ou outras bibliotecas separadamente! Tudo já está configurado no `package.json` e será instalado automaticamente com `npm install`.
+
 ### Instalação
 
 1. **Clone ou baixe o repositório:**

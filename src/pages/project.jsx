@@ -65,7 +65,7 @@ export default function Project() {
                             Principais Tecnologias
                         </h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {projectData.technologies.items.slice(0, 4).map((t, idx) => (
+                            {projectData.technologies.frameworks?.items?.slice(0, 4).map((t, idx) => (
                                 <div
                                     key={idx}
                                     className="p-4 rounded-md shadow-sm text-center transition-all duration-300"
