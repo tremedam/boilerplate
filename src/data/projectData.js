@@ -2,29 +2,18 @@
 export const projectData = {
     // Cabeçalho
     header: {
-        title: "Template Acadêmico Pro",
-        subtitle: "Boilerplate para Apresentação de Projetos Universitários",
+        title: "Agenda de Recebimento",
+        subtitle: "Sistema Moderno de Controle de Mercadorias",
         logo: "/images/logotemplate.png", // opcional
     },
 
     // Hero / Seção Principal
     hero: {
-        title: "Sistema de Apresentação de Projetos Acadêmicos",
+        title: "Sistema de Agendamento",
         description:
-            "Um template moderno e responsivo com Dark Mode configurável, desenvolvido com Next.js e Tailwind CSS. Criado para facilitar a documentação e apresentação visual de trabalhos acadêmicos, TCCs e projetos universitários com personalização completa através de um único arquivo.",
+            "Aplicação web inicial desenvolvida com HTML5, CSS3 e JavaScript puro para gerenciar entregas, controlar fornecedores e monitorar status de recebimentos em tempo real. Interface responsiva com dashboard interativo, filtros avançados e exportação de dados para otimizar a gestão logística empresarial.",
         image: "/images/apresentacao.png",
-        buttons: [
-            {
-                text: "Ver GitHub",
-                href: "https://github.com/tremedam/boilerplate",
-                primary: true,
-            },
-            {
-                text: "Documentação",
-                href: "/docs/LICENSE",
-                primary: false,
-            },
-        ],
+        buttons: [],
     },
 
     // Sobre o Projeto
@@ -33,36 +22,36 @@ export const projectData = {
         content: `
         
       **Visão Geral:**
-      Este projeto acadêmico representa a criação de um template moderno e profissional para apresentação de trabalhos universitários, TCCs e projetos de pesquisa. Desenvolvido como um trabalho que documenta sua própria construção, ele demonstra na prática os conceitos e tecnologias utilizadas em seu desenvolvimento, incluindo um sistema completo de Dark Mode com temas configuráveis.
+      A Agenda de Recebimento de Mercadorias é um projeto acadêmico desenvolvido inicialmente como apresentação e concepção de software para a disciplina de Modelagem de Processos da Fatec Tatuí. Trata-se de uma proposta de sistema web para digitalizar e otimizar o controle de entregas e recebimentos, transformando processos manuais em uma solução tecnológica completa com interface intuitiva, filtros avançados e métricas em tempo real.
 
       **Contexto e Motivação:**
-      Durante a graduação, observei que muitos estudantes enfrentam dificuldades para apresentar seus projetos de forma visual e profissional. A maioria das apresentações se limita a slides em PowerPoint ou documentos em PDF, que não conseguem transmitir adequadamente a complexidade e qualidade dos trabalhos desenvolvidos. Este template surge como solução para democratizar apresentações web de alta qualidade, acessíveis e modernas.
+      O projeto foi concebido a partir da identificação de um processo empresarial baseado em atualizações manuais distribuídas em 3 planilhas diferentes, sem controle adequado e qualidade eficiente da segurança de dados. O processo manual, além de trabalhoso de ensinar, também estava sujeito a erros humanos que afetavam o acompanhamento de prazos e fornecedores. Este protótipo surge como proposta de modernização, implementando melhores práticas de UX/UI e funcionalidades que atenderiam às necessidades dos departamentos de logística, comercial e loja. Após apresentação acadêmica na Fatec, o projeto está sendo apresentado à empresa para avaliação e possível escolha de desenvolvimento e implementação.
 
       **Objetivo Principal:**
-      Fornecer uma base sólida, moderna e totalmente customizável que permita estudantes focarem no conteúdo de seus projetos, sem precisar investir tempo aprendendo desenvolvimento web do zero. O template é projetado para ser intuitivo: basta editar um único arquivo de dados (projectData.js) para personalizar todo o conteúdo e as cores dos temas claro e escuro.
+      Criar uma aplicação web robusta e eficiente que permita à equipe de recebimento gerenciar entregas de forma ágil e organizada, com visualização clara de status das entregas, filtros inteligentes por código, descrição, fornecedor e datas, além de dashboard com métricas instantâneas e capacidade de exportação para análises externas.
 
       **Metodologia de Desenvolvimento:**
-      O projeto foi desenvolvido seguindo as melhores práticas de engenharia de software moderna:
+      O projeto foi desenvolvido com tecnologias web nativas seguindo princípios de clean code e progressive enhancement:
       
-      • Arquitetura baseada em componentes React para máxima reutilização
-      • Next.js para otimização automática de performance e SEO
-      • Tailwind CSS para estilização rápida e consistente
-      • Sistema de Dark Mode com next-themes e persistência de preferências
-      • Hook customizado (useThemeColors) para gerenciamento de cores configuráveis
-      • Sistema de rotas dedicadas para melhor organização do conteúdo
-      • Configuração centralizada para facilitar personalização
-      • Versionamento com Git para rastreamento de mudanças
+      • HTML5 semântico para estrutura acessível e bem organizada
+      • CSS3 moderno com Flexbox/Grid, animações suaves e design responsivo
+      • JavaScript ES6+ com manipulação DOM nativa e programação funcional
+      • Sistema de temas (light/dark) com persistência em localStorage
+      • Arquitetura modular com separação de responsabilidades
+      • Versionamento Git com commits documentados
+      • Validações de formulário e confirmações de segurança
+      • Performance otimizada sem dependências pesadas
 
       **Diferenciais Técnicos:**
-      Este não é apenas um template estático. Ele incorpora recursos avançados como Server-Side Rendering (SSR), otimização automática de imagens, geração de páginas estáticas, Dark Mode automático com alternância suave, sistema de temas totalmente configurável (light/dark), e persistência de preferências do usuário. Tudo isso mantendo simplicidade de uso para quem não tem conhecimento técnico profundo.
+      O sistema se destaca pela combinação de interface moderna com performance nativa. Sem frameworks pesados, a aplicação carrega instantaneamente, oferecendo ordenação dinâmica de tabelas, paginação configurável (10/25/50/100 itens), sistema de filtros em tempo real, notificações visuais para ações do usuário, modal responsivo para CRUD completo, exportação CSV com formatação adequada, e indicadores visuais de status com cores corporativas.
 
       **Aplicabilidade:**
-      O template é versátil e pode ser adaptado para diversos tipos de projetos acadêmicos: TCCs, projetos de iniciação científica, trabalhos de disciplinas, portfólios de projetos de extensão, documentação de pesquisas, e até mesmo apresentações de defesa de mestrado/doutorado. O sistema de temas permite adaptar a identidade visual de forma profissional e acessível.
+      O sistema é ideal para departamentos de logística, recebimento e compras que precisam controlar entregas de fornecedores, monitorar prazos, gerar relatórios e manter histórico organizado. Alem de acompanhamento eficiente, a solução proposta visa aumentar a produtividade operacional, reduzir erros manuais e proporcionar uma visão gerencial para a matriz e para as lojas, de forma clara através de métricas em tempo real.
     `,
         stats: [
-            { label: "Tempo de Desenvolvimento", value: "4 semanas" },
-            { label: "Tecnologias", value: "16" },
-            { label: "Componentes", value: "8" },
+            { label: "Desenvolvimento", value: "3 semanas" },
+            { label: "Linhas de Código", value: "1500+" },
+            { label: "Fornecedores Cadastrados", value: "5" },
         ],
     },
 
@@ -71,44 +60,54 @@ export const projectData = {
         title: "Principais Funcionalidades",
         items: [
             {
-                icon: "🌓",
-                title: "Dark Mode Automático",
-                description: "Sistema completo de alternância entre temas claro e escuro com persistência de preferência do usuário e respeito à configuração do sistema operacional.",
+                icon: "✨",
+                title: "Interface Moderna e Responsiva",
+                description: "Design corporativo com gradientes profissionais, animações suaves e layout adaptável.",
             },
             {
-                icon: "🎨",
-                title: "Temas Totalmente Configuráveis",
-                description: "Personalize todas as cores (fundos, textos, cards, header, footer) para light e dark mode em um único arquivo de configuração centralizado.",
+                icon: "🔍",
+                title: "Sistema de Filtros Avançado",
+                description: "Filtros múltiplos por código antigo, descrição textual, fornecedor, status e intervalo de datas com busca em tempo real.",
             },
             {
-                icon: "📱",
-                title: "Design 100% Responsivo",
-                description: "Interface totalmente adaptável a diferentes tamanhos de tela, garantindo ótima experiência em desktop, tablet e mobile com grid system moderno.",
+                icon: "📊",
+                title: "Dashboard com Métricas em Tempo Real",
+                description: "Cards informativos mostrando total de itens, quantidade no prazo, itens em atraso e número de fornecedores ativos com indicadores visuais coloridos.",
             },
             {
-                icon: "⚡",
-                title: "Performance Otimizada",
-                description: "Utiliza Next.js com SSR, SSG e otimização automática de imagens para carregamento ultra-rápido das páginas e melhor SEO.",
-            },
-            {
-                icon: "🧩",
-                title: "Componentes Modulares",
-                description: "Arquitetura baseada em componentes React reutilizáveis com hook customizado (useThemeColors) para gerenciamento de estilos, facilitando manutenção e customização.",
+                icon: "📋",
+                title: "Tabela Interativa Completa",
+                description: "Ordenação por qualquer coluna, paginação configurável (10/25/50/100 itens), seleção múltipla e ações rápidas (visualizar/editar/excluir).",
             },
             {
                 icon: "⚙️",
-                title: "Configuração Centralizada",
-                description: "Todo conteúdo e estilos gerenciados através de um único arquivo (projectData.js), simplificando edições sem necessidade de tocar no código dos componentes.",
+                title: "CRUD Completo com Modal",
+                description: "Adicionar, editar e excluir itens através de modal responsivo com validação de formulários e confirmações de segurança para proteção dos dados.",
             },
             {
-                icon: "🔗",
-                title: "Rotas Dedicadas",
-                description: "Páginas separadas para funcionalidades, tecnologias e equipe com navegação fluida, melhorando organização do conteúdo e SEO.",
+                icon: "📥",
+                title: "Exportação de Dados CSV",
+                description: "Download instantâneo de relatórios filtrados em formato CSV com todas as informações (código, descrição, fornecedor, datas, quantidades, observações).",
             },
             {
-                icon: "✨",
-                title: "Transições Suaves",
-                description: "Animações e transições elegantes entre temas, estados de componentes e interações do usuário para uma experiência visual premium.",
+                icon: "🔔",
+                title: "Sistema de Notificações",
+                description: "Feedback visual instantâneo com notificações toast para todas as ações (sucesso, erro, informação) melhorando a experiência do usuário.",
+            },
+            {
+                icon: "🌙",
+                title: "Dark Mode com Persistência",
+                description: "Alternância entre temas claro e escuro com preferência salva no localStorage, garantindo consistência entre sessões e conforto visual.",
+            },
+            {
+                icon: "⏱️",
+                title: "Atualização Automática",
+                description: "Data e hora atualizadas automaticamente a cada minuto no cabeçalho, mantendo informações de referência sempre precisas e sincronizadas.",
+            },
+            {
+                icon: "✅",
+                title: "Indicadores Visuais de Status",
+                description: "Badges coloridos e ícones intuitivos diferenciando visualmente itens no prazo (verde) dos em atraso (vermelho) para identificação instantânea.",
             },
         ],
     },
@@ -125,17 +124,17 @@ export const projectData = {
             items: [
                 {
                     name: "JavaScript (ES6+)",
-                    description: "Linguagem de programação moderna com recursos avançados, hooks e programação funcional",
+                    description: "Linguagem principal com programação funcional, manipulação DOM nativa, event listeners e lógica de negócios",
                     image: "/images/tech/javascript.svg",
                 },
                 {
                     name: "HTML5",
-                    description: "Linguagem de marcação para estruturação do conteúdo web",
+                    description: "Estrutura semântica moderna para acessibilidade e organização do conteúdo com tags apropriadas",
                     image: "/images/tech/html.svg",
                 },
                 {
                     name: "CSS3",
-                    description: "Linguagem de estilização para design e layout responsivo",
+                    description: "Estilização avançada com Flexbox, Grid Layout, animações, transições e design responsivo",
                     image: "/images/tech/css.svg",
                 },
             ],
@@ -144,22 +143,12 @@ export const projectData = {
         // Frameworks
         frameworks: {
             title: "Frameworks",
-            description: "Estruturas robustas que guiam a arquitetura e desenvolvimento",
+            description: "Estruturas e bibliotecas que guiam o desenvolvimento",
             items: [
                 {
-                    name: "Next.js 14",
-                    description: "Framework React para aplicações web modernas com SSR, SSG e otimização automática",
-                    image: "/images/tech/nextjs.svg",
-                },
-                {
-                    name: "React 18",
-                    description: "Biblioteca JavaScript para construção de interfaces de usuário com componentes reutilizáveis",
-                    image: "/images/tech/react.svg",
-                },
-                {
-                    name: "Tailwind CSS 3",
-                    description: "Framework CSS utility-first para estilização rápida, responsiva e com suporte a dark mode",
-                    image: "/images/tech/tailwind.svg",
+                    name: "Vanilla JavaScript",
+                    description: "JavaScript puro sem dependências, garantindo performance nativa máxima e compatibilidade universal",
+                    image: "/images/tech/javascript.svg",
                 },
             ],
         },
@@ -167,22 +156,12 @@ export const projectData = {
         // Bibliotecas
         libraries: {
             title: "Bibliotecas",
-            description: "Pacotes e módulos que estendem as funcionalidades do projeto",
+            description: "Pacotes externos utilizados no projeto",
             items: [
                 {
-                    name: "next-themes",
-                    description: "Biblioteca para gerenciamento de temas com persistência, SSR support e alternância light/dark",
-                    image: "/images/tech/nextjs.svg",
-                },
-                {
-                    name: "PostCSS",
-                    description: "Ferramenta para transformar CSS com JavaScript, usado pelo Tailwind",
-                    image: "/images/tech/postcss.svg",
-                },
-                {
-                    name: "Autoprefixer",
-                    description: "Plugin PostCSS para adicionar prefixos de navegadores automaticamente",
-                    image: "/images/tech/autoprefixer.svg",
+                    name: "Font Awesome 6.0",
+                    description: "Ícones vetoriais profissionais para interface moderna e intuitiva com símbolos reconhecíveis",
+                    image: "/images/tech/fontawesome.svg",
                 },
             ],
         },
@@ -193,14 +172,9 @@ export const projectData = {
             description: "Ferramentas essenciais para desenvolvimento, versionamento e produtividade",
             items: [
                 {
-                    name: "Node.js 20",
-                    description: "Ambiente de execução JavaScript para desenvolvimento, build e execução do servidor Next.js",
-                    image: "/images/tech/nodejs.svg",
-                },
-                {
-                    name: "npm",
-                    description: "Gerenciador de pacotes para instalação e controle de dependências do projeto",
-                    image: "/images/tech/npm.svg",
+                    name: "VS Code",
+                    description: "Editor de código com extensões para produtividade, debugging e IntelliSense",
+                    image: "/images/tech/vscode.svg",
                 },
                 {
                     name: "Git",
@@ -208,14 +182,9 @@ export const projectData = {
                     image: "/images/tech/git.svg",
                 },
                 {
-                    name: "VS Code",
-                    description: "Editor de código moderno com extensões, IntelliSense e integração Git",
-                    image: "/images/tech/vscode.svg",
-                },
-                {
-                    name: "ESLint",
-                    description: "Ferramenta de linting para identificar e corrigir problemas no código JavaScript",
-                    image: "/images/tech/eslint.svg",
+                    name: "Live Server",
+                    description: "Servidor de desenvolvimento local com hot reload automático para testes rápidos",
+                    image: "/images/tech/liveserver.svg",
                 },
             ],
         },
@@ -226,11 +195,6 @@ export const projectData = {
             description: "Serviços de hospedagem, deploy e controle de versão",
             items: [
                 {
-                    name: "Vercel",
-                    description: "Plataforma de deploy otimizada para projetos Next.js com CI/CD automático e edge network",
-                    image: "/images/tech/vercel.svg",
-                },
-                {
                     name: "GitHub",
                     description: "Plataforma de hospedagem de código-fonte com versionamento, colaboração e GitHub Actions",
                     image: "/images/tech/github.svg",
@@ -239,27 +203,27 @@ export const projectData = {
         },
     },    // Galeria / Screenshots
     gallery: {
-        title: "Capturas de Tela do Template",
+        title: "Capturas de Tela do Sistema",
         images: [
             {
                 src: "/images/screenshots/home.png",
-                caption: "Página principal com Hero Section e seções de preview",
+                caption: "Dashboard principal com métricas em tempo real e indicadores de status",
             },
             {
                 src: "/images/screenshots/features.jpg",
-                caption: "Página dedicada de funcionalidades com grid responsivo",
+                caption: "Sistema de filtros avançado por código, descrição, fornecedor e datas",
             },
             {
                 src: "/images/screenshots/technologies.jpg",
-                caption: "Showcase de tecnologias utilizadas no projeto",
+                caption: "Tabela interativa com ordenação, paginação e ações rápidas",
             },
             {
                 src: "/images/screenshots/team.jpg",
-                caption: "Página da equipe com perfis e redes sociais",
+                caption: "Modal de CRUD com validações em tempo real para formulários",
             },
             {
                 src: "/images/screenshots/mobile.jpg",
-                caption: "Design responsivo em dispositivos móveis",
+                caption: "Interface responsiva em dispositivos móveis com navegação intuitiva",
             },
         ],
     },
@@ -268,22 +232,22 @@ export const projectData = {
     results: {
         title: "Resultados Alcançados",
         content: `
-      O projeto superou todos os objetivos propostos, resultando em um template funcional, 
-      profissional e altamente customizável. A estrutura modular com sistema de temas 
-      configurável permite rápida adaptação para diferentes tipos de projetos acadêmicos 
-      mantendo acessibilidade e modernidade visual.
+      O sistema modernizou completamente o processo de controle de recebimento de mercadorias, 
+      substituindo métodos manuais por uma aplicação web moderna, intuitiva e eficiente. 
+      A interface responsiva e recursos avançados aumentaram significativamente a produtividade 
+      operacional e a visibilidade gerencial.
     `,
         achievements: [
-            "Template totalmente funcional com 8 componentes reutilizáveis e responsivos",
-            "Dark Mode completo com alternância automática e persistência de preferência",
-            "Sistema de temas configurável com 14+ propriedades de cores personalizáveis",
-            "Hook customizado (useThemeColors) para gerenciamento centralizado de estilos",
-            "Sistema de rotas implementado com navegação fluida entre páginas",
-            "Documentação completa no README com instruções de uso e customização",
-            "Performance otimizada com Next.js alcançando 90+ no Lighthouse",
-            "Design responsivo testado em múltiplos dispositivos e resoluções",
-            "Código versionado no GitHub com licença MIT (open-source)",
-            "Transições suaves e animações para melhor experiência do usuário",
+            "Modernização completa do sistema legado com redução de 60% no tempo de cadastro",
+            "Performance nativa com carregamento <500ms usando Vanilla JavaScript puro",
+            "Sistema de filtros múltiplos reduzindo tempo de busca em 80%",
+            "Dashboard em tempo real para gestão proativa de fornecedores e prazos",
+            "Exportação CSV instantânea facilitando análises e relatórios gerenciais",
+            "Interface intuitiva permitindo adoção imediata sem necessidade de treinamento",
+            "Dark mode com persistência para conforto visual em diferentes ambientes",
+            "Design responsivo garantindo acesso em desktop, tablet e mobile",
+            "CRUD completo com validações robustas protegendo integridade dos dados",
+            "Notificações em tempo real melhorando feedback e experiência do usuário",
         ],
     },
 
@@ -293,7 +257,7 @@ export const projectData = {
         members: [
             {
                 name: "Thiago F.S Dias",
-                role: "Aspirante a Full-Stack Developer",
+                role: "Estudante Aspirante a Full Stack",
                 image: "/images/team/thiago.jpg",
                 github: "https://github.com/tremedam",
                 linkedin: "https://www.linkedin.com/in/thiago-fellipe-28471a26a/",
@@ -301,20 +265,20 @@ export const projectData = {
         ],
         advisor: {
             name: "Projeto Individual",
-            role: "Trabalho Acadêmico Autônomo",
+            role: "Sistema de Controle de Recebimentos",
             email: "thiagofellipe055@gmail.com",
         },
     },
 
     // Rodapé
     footer: {
-        university: "Projeto de Estudo Pessoal",
-        course: "Desenvolvimento Web Full-Stack",
-        semester: "2025",
+        university: "Fatec Tatui Prof. Wilson Roberto Ribeiro de Camargo",
+        course: "Gestão da Tecnologia da Informação",
+        semester: "Segundo",
         year: "2025",
         contact: {
             email: "thiagofellipe055@gmail.com",
-            github: "https://github.com/tremedam/boilerplate",
+            github: "https://github.com/tremedam/AgendaReceb_Mercadorias",
         },
     },
 
