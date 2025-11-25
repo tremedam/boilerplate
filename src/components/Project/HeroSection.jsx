@@ -49,16 +49,12 @@ export default function HeroSection({ data, theme }) {
           </div>
 
           {/* Imagem */}
-          <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl transition-colors duration-300" style={{ backgroundColor: colors.background }}>
-            <div className="w-full h-full flex items-center justify-center p-8">
-              <Image
-                src={data.image}
-                alt={data.title}
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
+          <div className="relative w-full">
+            <img
+              src={data.image}
+              alt={data.title}
+              className="w-full h-auto rounded-lg shadow-2xl"
+            />
           </div>
         </div>
       </div>

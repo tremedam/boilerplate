@@ -4,7 +4,7 @@ export const projectData = {
     header: {
         title: "Agenda de Recebimento",
         subtitle: "Sistema Moderno de Controle de Mercadorias",
-        logo: "/images/logotemplate.png", // opcional
+        logo: "", // opcional
     },
 
     // Hero / Seção Principal
@@ -12,7 +12,7 @@ export const projectData = {
         title: "Sistema de Agendamento",
         description:
             "Aplicação web inicial desenvolvida com HTML5, CSS3 e JavaScript puro para gerenciar entregas, controlar fornecedores e monitorar status de recebimentos em tempo real. Interface responsiva com dashboard interativo, filtros avançados e exportação de dados para otimizar a gestão logística empresarial.",
-        image: "/images/apresentacao.png",
+        image: "/images/screenshots/home.png",
         buttons: [],
     },
 
