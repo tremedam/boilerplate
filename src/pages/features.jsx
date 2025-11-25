@@ -1,8 +1,14 @@
 import { projectData } from "@/data/projectData";
 import ProjectLayout from "@/components/Project/ProjectLayout";
+import Cards from "@/components/Project/Cards";
+import { useState } from "react";
+import { useThemeColors } from "@/hooks/useThemeColors";
 
 export default function FeaturesPage() {
     const { features, header, footer, theme } = projectData;
+    const [expandedCard, setExpandedCard] = useState(null);
+    const { colors } = useThemeColors();
+
     return (
         <ProjectLayout
             headerData={header}
@@ -13,22 +19,22 @@ export default function FeaturesPage() {
         >
             <section className="py-16 max-w-6xl mx-auto px-4" id="features">
                 <h1
-                    className="text-4xl font-bold mb-8"
-                    style={{ color: theme.primary }}
+                    className="text-4xl font-bold mb-8 transition-colors duration-300"
+                    style={{ color: colors.title }}
                 >
                     {features.title || "Funcionalidades"}
                 </h1>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 items-start">
                     {features.items?.map((f, idx) => (
-                        <div
+                        <Cards
                             key={idx}
-                            className="p-6 rounded-lg shadow-sm border bg-white flex flex-col"
-                            style={{ borderColor: theme.secondary + '22' }}
-                        >
-                            <div className="text-3xl mb-4">{f.icon}</div>
-                            <h2 className="text-xl font-semibold mb-2">{f.title}</h2>
-                            <p className="text-gray-600 text-sm leading-relaxed">{f.description}</p>
-                        </div>
+                            title={f.title}
+                            icon=""
+                            content={<p className="text-sm leading-relaxed">{f.description}</p>}
+                            theme={theme}
+                            isExpanded={expandedCard === idx}
+                            onToggle={() => setExpandedCard(expandedCard === idx ? null : idx)}
+                        />
                     ))}
                 </div>
             </section>

@@ -1,19 +1,22 @@
 import Image from "next/image";
+import { useThemeColors } from "@/hooks/useThemeColors";
 
 export default function HeroSection({ data, theme }) {
+  const { colors } = useThemeColors();
+
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+    <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Conteúdo */}
           <div className="space-y-6">
             <h2
-              className="text-4xl md:text-5xl font-bold leading-tight"
-              style={{ color: theme.primary }}
+              className="text-4xl md:text-5xl font-bold leading-tight transition-colors duration-300"
+              style={{ color: colors.title }}
             >
               {data.title}
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg leading-relaxed transition-colors duration-300" style={{ color: colors.text }}>
               {data.description}
             </p>
 
@@ -23,15 +26,20 @@ export default function HeroSection({ data, theme }) {
                 <a
                   key={index}
                   href={button.href}
-                  className={`px-6 py-3 rounded-lg font-semibold transition shadow-lg ${
-                    button.primary
-                      ? "text-white hover:opacity-90"
-                      : "bg-white text-gray-800 hover:bg-gray-100"
-                  }`}
+                  target={button.href.startsWith('http') ? '_blank' : undefined}
+                  rel={button.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  className="px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                   style={
                     button.primary
-                      ? { backgroundColor: theme.primary }
-                      : undefined
+                      ? {
+                        backgroundColor: colors.primary,
+                        color: '#ffffff',
+                      }
+                      : {
+                        backgroundColor: colors.background,
+                        color: colors.text,
+                        border: `2px solid ${colors.primary}`
+                      }
                   }
                 >
                   {button.text}
@@ -41,14 +49,16 @@ export default function HeroSection({ data, theme }) {
           </div>
 
           {/* Imagem */}
-          <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl">
-            <Image
-              src={data.image}
-              alt={data.title}
-              fill
-              className="object-cover"
-              priority
-            />
+          <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl transition-colors duration-300" style={{ backgroundColor: colors.background }}>
+            <div className="w-full h-full flex items-center justify-center p-8">
+              <Image
+                src={data.image}
+                alt={data.title}
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>

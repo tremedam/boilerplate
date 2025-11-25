@@ -1,9 +1,12 @@
 import Image from "next/image";
 import { projectData } from "@/data/projectData";
 import ProjectLayout from "@/components/Project/ProjectLayout";
+import { useThemeColors } from "@/hooks/useThemeColors";
 
 export default function TeamPage() {
     const { team, header, footer, theme } = projectData;
+    const { colors } = useThemeColors();
+
     return (
         <ProjectLayout
             headerData={header}
@@ -14,8 +17,8 @@ export default function TeamPage() {
         >
             <section className="py-16 max-w-6xl mx-auto px-4" id="team">
                 <h1
-                    className="text-4xl font-bold mb-8"
-                    style={{ color: theme.primary }}
+                    className="text-4xl font-bold mb-8 transition-colors duration-300"
+                    style={{ color: colors.title }}
                 >
                     {team.title || "Equipe do Projeto"}
                 </h1>
@@ -23,8 +26,7 @@ export default function TeamPage() {
                     {team.members?.map((m, idx) => (
                         <div
                             key={idx}
-                            className="p-6 rounded-lg shadow-sm border bg-white text-center"
-                            style={{ borderColor: theme.secondary + '22' }}
+                            className="p-6 rounded-lg shadow-sm border text-center bg-blue-900 dark:bg-gray-700 border-blue-900 dark:border-gray-600 transition-colors duration-300"
                         >
                             <div className="relative w-28 h-28 mx-auto mb-4">
                                 <Image
@@ -34,13 +36,13 @@ export default function TeamPage() {
                                     className="rounded-full object-cover"
                                 />
                             </div>
-                            <h2 className="text-lg font-semibold">{m.name}</h2>
-                            <p className="text-gray-600 text-sm mb-3">{m.role}</p>
+                            <h2 className="text-lg font-semibold text-white">{m.name}</h2>
+                            <p className="text-gray-200 dark:text-gray-300 text-sm mb-3">{m.role}</p>
                             <div className="flex justify-center gap-4 text-sm">
                                 {m.github && (
                                     <a
                                         href={m.github}
-                                        className="text-blue-600 hover:underline"
+                                        className="text-cyan-400 hover:underline"
                                         target="_blank"
                                         rel="noreferrer"
                                     >
@@ -50,7 +52,7 @@ export default function TeamPage() {
                                 {m.linkedin && (
                                     <a
                                         href={m.linkedin}
-                                        className="text-blue-600 hover:underline"
+                                        className="text-cyan-400 hover:underline"
                                         target="_blank"
                                         rel="noreferrer"
                                     >
@@ -63,15 +65,14 @@ export default function TeamPage() {
                 </div>
 
                 {team.advisor && (
-                    <div className="mt-12 p-6 rounded-lg bg-gray-50 border"
-                        style={{ borderColor: theme.secondary + '22' }}
+                    <div className="mt-12 p-6 rounded-lg border bg-blue-900 dark:bg-gray-700 border-blue-900 dark:border-gray-600 transition-colors duration-300"
                     >
-                        <h3 className="text-xl font-semibold mb-2">Orientador</h3>
-                        <p className="text-gray-700">
+                        <h3 className="text-xl font-semibold mb-2 text-white">Orientador</h3>
+                        <p className="text-gray-200 dark:text-gray-300">
                             {team.advisor.name} — {team.advisor.role}
                         </p>
                         {team.advisor.email && (
-                            <a href={`mailto:${team.advisor.email}`} className="text-blue-600 hover:underline text-sm">
+                            <a href={`mailto:${team.advisor.email}`} className="text-cyan-400 hover:underline text-sm">
                                 {team.advisor.email}
                             </a>
                         )}

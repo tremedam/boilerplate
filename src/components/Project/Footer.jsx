@@ -1,8 +1,16 @@
+import { useThemeColors } from "@/hooks/useThemeColors";
+
 export default function Footer({ data, theme }) {
+    const { colors } = useThemeColors();
+
     return (
         <footer
-            className="py-12 text-white"
-            style={{ backgroundColor: theme.primary }}
+            className="py-12 transition-colors duration-300"
+            style={{
+                backgroundColor: colors.footer.bg,
+                borderTop: `3px solid ${colors.primary}`,
+                color: colors.footer.text
+            }}
         >
             <div className="max-w-7xl mx-auto px-4">
                 <div className="grid md:grid-cols-3 gap-8 mb-8">
@@ -57,6 +65,6 @@ export default function Footer({ data, theme }) {
                     </p>
                 </div>
             </div>
-        </footer>
+        </footer >
     );
 }
