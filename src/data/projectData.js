@@ -281,18 +281,39 @@ export const projectData = {
 
     // Equipe
     team: {
-        title: "Desenvolvedor",
+        title: "Desenvolvedores",
         members: [
             {
                 name: "Erik Paiva",
-                role: "Desenvolvedor Python/Django",
+                role: "Developer Principal Python/Django",
                 image: "/images/team/paiva.png",
                 github: "https://github.com/PaivaOfc",
                 linkedin: "http://www.linkedin.com/in/erik-paiva-4a7b02245",
             },
+            {
+                name: "Thiago Dias",
+                role: "Responsavel de Apresentação/Design Django",
+                image: "/images/team/thiago.jpg",
+                github: "https://github.com/tremedam",
+                linkedin: "www.linkedin.com/in/thiago-fellipe-28471a26a",
+            },
+            {
+                name: "Gabriel Marques",
+                role: "Responsavel de Documentação/Tester",
+                image: "/images/team/gabriel.png",
+                github: "https://github.com/",
+                linkedin: "www.linkedin.com/in/",
+            },
+            {
+                name: "Guilherme Lima",
+                role: "Responsavel de BD/Tester",
+                image: "/images/team/guilherme.png",
+                github: "https://github.com/",
+                linkedin: "www.linkedin.com/in/",
+            },
         ],
         advisor: {
-            name: "Projeto Individual",
+            name: "Projeto em grupo",
             role: "Sistema de Gestão Corporativa",
             email: "contato@projeto.com",
         },
