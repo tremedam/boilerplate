@@ -61,8 +61,8 @@ export const projectData = {
     `,
         stats: [
             { label: "Tempo de Desenvolvimento", value: "3 meses" },
-            { label: "Tecnologias", value: "12" },
-            { label: "Modelos de Dados", value: "4" },
+            { label: "Tecnologias", value: "13" },
+            { label: "Modelos de Dados", value: "1" },
         ],
     },
 
@@ -315,7 +315,7 @@ export const projectData = {
         advisor: {
             name: "Projeto em grupo",
             role: "Sistema de Gestão Corporativa",
-            email: "contato@projeto.com",
+            /* email: "contato@projeto.com", */
         },
     },
 
