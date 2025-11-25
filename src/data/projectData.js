@@ -286,9 +286,9 @@ export const projectData = {
             {
                 name: "Erik Paiva",
                 role: "Desenvolvedor Python/Django",
-                image: "/images/team/paiva.jpg",
+                image: "/images/team/paiva.png",
                 github: "https://github.com/PaivaOfc",
-                linkedin: "#",
+                linkedin: "http://www.linkedin.com/in/erik-paiva-4a7b02245",
             },
         ],
         advisor: {
