@@ -6,6 +6,26 @@ import { useThemeColors } from "@/hooks/useThemeColors";
 export default function Gallery() {
     const { colors } = useThemeColors();
     const [selectedImage, setSelectedImage] = useState(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const openImage = (image, index) => {
+        setSelectedImage(image);
+        setCurrentIndex(index);
+    };
+
+    const nextImage = (e) => {
+        e.stopPropagation();
+        const newIndex = (currentIndex + 1) % projectData.gallery.images.length;
+        setCurrentIndex(newIndex);
+        setSelectedImage(projectData.gallery.images[newIndex]);
+    };
+
+    const prevImage = (e) => {
+        e.stopPropagation();
+        const newIndex = (currentIndex - 1 + projectData.gallery.images.length) % projectData.gallery.images.length;
+        setCurrentIndex(newIndex);
+        setSelectedImage(projectData.gallery.images[newIndex]);
+    };
 
     return (
         <section className="py-16 px-4 transition-colors duration-300">
@@ -22,7 +42,7 @@ export default function Gallery() {
                         <div
                             key={index}
                             className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-                            onClick={() => setSelectedImage(image)}
+                            onClick={() => openImage(image, index)}
                             style={{
                                 backgroundColor: colors.cards.bg,
                                 borderColor: colors.cards.border,
@@ -56,10 +76,20 @@ export default function Gallery() {
                         className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
                         onClick={() => setSelectedImage(null)}
                     >
+                        {/* Seta Esquerda */}
+                        <button
+                            onClick={prevImage}
+                            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 text-white text-2xl font-bold z-10"
+                            aria-label="Imagem anterior"
+                        >
+                            &#8249;
+                        </button>
+
                         <div className="max-w-4xl w-full">
                             <div
                                 className="rounded-lg overflow-hidden shadow-2xl"
                                 style={{ backgroundColor: colors.cards.bg }}
+                                onClick={(e) => e.stopPropagation()}
                             >
                                 <div className="w-full max-h-[70vh] relative bg-gray-200 dark:bg-gray-700 overflow-hidden flex items-center justify-center">
                                     <img
@@ -75,6 +105,9 @@ export default function Gallery() {
                                     <p className="text-center text-lg">
                                         {selectedImage.caption}
                                     </p>
+                                    <p className="text-center text-sm mt-2 opacity-70">
+                                        {currentIndex + 1} / {projectData.gallery.images.length}
+                                    </p>
                                 </div>
                             </div>
                             <button
@@ -88,6 +121,15 @@ export default function Gallery() {
                                 Fechar
                             </button>
                         </div>
+
+                        {/* Seta Direita */}
+                        <button
+                            onClick={nextImage}
+                            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 text-white text-2xl font-bold z-10"
+                            aria-label="Próxima imagem"
+                        >
+                            &#8250;
+                        </button>
                     </div>
                 )}
             </div>

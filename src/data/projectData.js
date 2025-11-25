@@ -123,7 +123,7 @@ export const projectData = {
             description: "Linguagens utilizadas no desenvolvimento do projeto",
             items: [
                 {
-                    name: "JavaScript (ES6+)",
+                    name: "JavaScript",
                     description: "Linguagem principal com programação funcional, manipulação DOM nativa, event listeners e lógica de negócios",
                     image: "/images/tech/javascript.svg",
                 },
@@ -159,7 +159,7 @@ export const projectData = {
             description: "Pacotes externos utilizados no projeto",
             items: [
                 {
-                    name: "Font Awesome 6.0",
+                    name: "Font Awesome",
                     description: "Ícones vetoriais profissionais para interface moderna e intuitiva com símbolos reconhecíveis",
                     image: "/images/tech/fontawesome.svg",
                 },
@@ -186,6 +186,21 @@ export const projectData = {
                     description: "Servidor de desenvolvimento local com hot reload automático para testes rápidos",
                     image: "/images/tech/liveserver.svg",
                 },
+                {
+                    name: "Jest",
+                    description: "Framework de testes JavaScript focado em simplicidade para garantir qualidade do código",
+                    image: "/images/tech/jest.svg",
+                },
+                {
+                    name: "ESLint",
+                    description: "Ferramenta de linting para identificar e corrigir problemas no código JavaScript",
+                    image: "/images/tech/eslint.svg",
+                },
+                {
+                    name: "Prettier",
+                    description: "Formatador de código automático para manter consistência e padrões de estilo",
+                    image: "/images/tech/prettier.svg",
+                },
             ],
         },
 
@@ -207,47 +222,59 @@ export const projectData = {
         images: [
             {
                 src: "/images/screenshots/home.png",
-                caption: "Dashboard principal com métricas em tempo real e indicadores de status",
+                caption: "Tela de login inicial com design moderno e responsivo",
             },
             {
-                src: "/images/screenshots/features.jpg",
-                caption: "Sistema de filtros avançado por código, descrição, fornecedor e datas",
+                src: "/images/screenshots/adm1.png",
+                caption: "Tela do administrador com visão geral dos recebimentos e métricas em tempo real",
             },
             {
-                src: "/images/screenshots/technologies.jpg",
-                caption: "Tabela interativa com ordenação, paginação e ações rápidas",
+                src: "/images/screenshots/adm2.png",
+                caption: "Tabela de agendamentos interativa com ordenação, paginação e ações rápidas",
             },
             {
-                src: "/images/screenshots/team.jpg",
-                caption: "Modal de CRUD com validações em tempo real para formulários",
+                src: "/images/screenshots/edit.png",
+                caption: "Modal de CRUD para adicionar, editar e excluir agendamentos com validações em tempo real",
             },
             {
-                src: "/images/screenshots/mobile.jpg",
-                caption: "Interface responsiva em dispositivos móveis com navegação intuitiva",
+                src: "/images/screenshots/newAgenda.png",
+                caption: "Tela para adicionar novos agendamentos com validações em tempo real",
+            },
+            {
+                src: "/images/screenshots/filtro.png",
+                caption: "Filtros avançados por código, descrição, fornecedor e datas",
+            },
+            {
+                src: "/images/screenshots/loja1.png",
+                caption: "Tela da loja com visão simplificada dos recebimentos e status de entregas",
+            },
+            {
+                src: "/images/screenshots/loja2.png",
+                caption: "Tela da loja com visão simplificada dos recebimentos e status de entregas",
+            },
+            {
+                src: "/images/screenshots/filtroLoja.png",
+                caption: "Tela da loja com visão simplificada dos recebimentos e status de entregas",
             },
         ],
     },
 
     // Resultados
     results: {
-        title: "Resultados Alcançados",
+        title: "Resultados Esperados com Implementação",
         content: `
-      O sistema modernizou completamente o processo de controle de recebimento de mercadorias, 
-      substituindo métodos manuais por uma aplicação web moderna, intuitiva e eficiente. 
-      A interface responsiva e recursos avançados aumentaram significativamente a produtividade 
-      operacional e a visibilidade gerencial.
+      A implementação deste sistema representa uma transformação digital no processo de 
+      recebimento de mercadorias, com potencial de gerar ganhos significativos em eficiência 
+      operacional, qualidade de dados e visibilidade gerencial para toda a cadeia logística.
     `,
         achievements: [
-            "Modernização completa do sistema legado com redução de 60% no tempo de cadastro",
-            "Performance nativa com carregamento <500ms usando Vanilla JavaScript puro",
-            "Sistema de filtros múltiplos reduzindo tempo de busca em 80%",
-            "Dashboard em tempo real para gestão proativa de fornecedores e prazos",
-            "Exportação CSV instantânea facilitando análises e relatórios gerenciais",
-            "Interface intuitiva permitindo adoção imediata sem necessidade de treinamento",
-            "Dark mode com persistência para conforto visual em diferentes ambientes",
-            "Design responsivo garantindo acesso em desktop, tablet e mobile",
-            "CRUD completo com validações robustas protegendo integridade dos dados",
-            "Notificações em tempo real melhorando feedback e experiência do usuário",
+            "Redução estimada de 70% no tempo gasto com controle manual de planilhas",
+            "Eliminação de erros humanos em lançamentos e atualizações de dados",
+            "Melhoria na gestão de fornecedores com histórico completo e métricas precisas",
+            "Visibilidade gerencial em tempo real para tomada de decisões estratégicas",
+            "Redução de atrasos críticos através de alertas e dashboard proativo",
+            "Integração facilitada entre departamentos com dados centralizados e acessíveis",
+            "Base sólida para expansão futura com módulos de relatórios avançados e BI",
         ],
     },
 
