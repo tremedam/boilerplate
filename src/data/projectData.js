@@ -2,26 +2,26 @@
 export const projectData = {
     // Cabeçalho
     header: {
-        title: "Template Acadêmico Pro",
-        subtitle: "Boilerplate para Apresentação de Projetos Universitários",
+        title: "Controle de Veículos - Portaria",
+        subtitle: "Sistema de Gestão de Veículos Corporativos",
         logo: "/images/logotemplate.png", // opcional
     },
 
     // Hero / Seção Principal
     hero: {
-        title: "Sistema de Apresentação de Projetos Acadêmicos",
+        title: "Sistema de Controle de Uso de Carros Particulares da Empresa",
         description:
-            "Um template moderno e responsivo com Dark Mode configurável, desenvolvido com Next.js e Tailwind CSS. Criado para facilitar a documentação e apresentação visual de trabalhos acadêmicos, TCCs e projetos universitários com personalização completa através de um único arquivo.",
-        image: "/images/apresentacao.png",
+            "Uma solução web completa desenvolvida com Django para gerenciar o uso dos veículos corporativos, controlar motoristas autorizados, registrar entregas e monitorar a disponibilidade da frota em tempo real. Sistema intuitivo com interface moderna usando Tailwind CSS.",
+        image: "/images/apresentacao.jpg",
         buttons: [
             {
                 text: "Ver GitHub",
-                href: "https://github.com/tremedam/boilerplate",
+                href: "https://github.com/PaivaOfc/Controle-Carros-Portaria",
                 primary: true,
             },
             {
-                text: "Documentação",
-                href: "/docs/LICENSE",
+                text: "Demonstração",
+                href: "#",
                 primary: false,
             },
         ],
@@ -33,36 +33,36 @@ export const projectData = {
         content: `
         
       **Visão Geral:**
-      Este projeto acadêmico representa a criação de um template moderno e profissional para apresentação de trabalhos universitários, TCCs e projetos de pesquisa. Desenvolvido como um trabalho que documenta sua própria construção, ele demonstra na prática os conceitos e tecnologias utilizadas em seu desenvolvimento, incluindo um sistema completo de Dark Mode com temas configuráveis.
+      O Sistema de Controle de Carros de Portaria é uma aplicação web completa desenvolvida para gerenciar o uso eficiente dos veículos corporativos de uma empresa. O sistema permite o registro de motoristas autorizados, cadastro de veículos, controle de saídas e retornos, agendamentos e geração de relatórios detalhados de uso da frota.
 
       **Contexto e Motivação:**
-      Durante a graduação, observei que muitos estudantes enfrentam dificuldades para apresentar seus projetos de forma visual e profissional. A maioria das apresentações se limita a slides em PowerPoint ou documentos em PDF, que não conseguem transmitir adequadamente a complexidade e qualidade dos trabalhos desenvolvidos. Este template surge como solução para democratizar apresentações web de alta qualidade, acessíveis e modernas.
+      Empresas com frotas de veículos particulares enfrentam desafios diários no controle de quem está utilizando cada veículo, quando saíram, para onde foram e quando retornaram. O controle manual através de planilhas ou papéis é suscetível a erros, dificulta auditorias e não fornece visão em tempo real da disponibilidade dos veículos. Este projeto surge como solução digital para modernizar e automatizar todo esse processo de gestão.
 
       **Objetivo Principal:**
-      Fornecer uma base sólida, moderna e totalmente customizável que permita estudantes focarem no conteúdo de seus projetos, sem precisar investir tempo aprendendo desenvolvimento web do zero. O template é projetado para ser intuitivo: basta editar um único arquivo de dados (projectData.js) para personalizar todo o conteúdo e as cores dos temas claro e escuro.
+      Fornecer uma ferramenta centralizada e intuitiva para a equipe de portaria registrar, monitorar e controlar o uso dos veículos corporativos, permitindo rastreamento em tempo real de disponibilidade, histórico completo de utilização, validação de motoristas autorizados e geração de relatórios gerenciais para análise e tomada de decisões.
 
       **Metodologia de Desenvolvimento:**
-      O projeto foi desenvolvido seguindo as melhores práticas de engenharia de software moderna:
+      O projeto foi desenvolvido seguindo as melhores práticas de desenvolvimento web com Python e Django:
       
-      • Arquitetura baseada em componentes React para máxima reutilização
-      • Next.js para otimização automática de performance e SEO
-      • Tailwind CSS para estilização rápida e consistente
-      • Sistema de Dark Mode com next-themes e persistência de preferências
-      • Hook customizado (useThemeColors) para gerenciamento de cores configuráveis
-      • Sistema de rotas dedicadas para melhor organização do conteúdo
-      • Configuração centralizada para facilitar personalização
-      • Versionamento com Git para rastreamento de mudanças
+      • Arquitetura MVT (Model-View-Template) do Django para separação de responsabilidades
+      • Modelos relacionais com ORM do Django para integridade dos dados
+      • Validações de formulários com Django Forms e Crispy Forms com Tailwind
+      • Interface moderna e responsiva com Tailwind CSS
+      • Sistema de mensagens (messages framework) para feedback visual ao usuário
+      • Filtros e buscas dinâmicas para relatórios customizados
+      • Controle de estados (disponível/em uso) em tempo real
+      • Validações de regras de negócio (motorista só pode usar 1 veículo por vez)
 
       **Diferenciais Técnicos:**
-      Este não é apenas um template estático. Ele incorpora recursos avançados como Server-Side Rendering (SSR), otimização automática de imagens, geração de páginas estáticas, Dark Mode automático com alternância suave, sistema de temas totalmente configurável (light/dark), e persistência de preferências do usuário. Tudo isso mantendo simplicidade de uso para quem não tem conhecimento técnico profundo.
+      O sistema possui recursos avançados como controle de estado de veículos em tempo real (disponível/em uso), validação automática impedindo uso simultâneo de veículos pelo mesmo motorista, formulários dinâmicos que filtram apenas motoristas e veículos disponíveis, registro automático de quilometragem e horários, modais interativos para edição rápida sem recarregar página, sistema de agendamentos para planejamento futuro, e relatórios com filtros múltiplos (data, motorista, veículo).
 
       **Aplicabilidade:**
-      O template é versátil e pode ser adaptado para diversos tipos de projetos acadêmicos: TCCs, projetos de iniciação científica, trabalhos de disciplinas, portfólios de projetos de extensão, documentação de pesquisas, e até mesmo apresentações de defesa de mestrado/doutorado. O sistema de temas permite adaptar a identidade visual de forma profissional e acessível.
+      O sistema é ideal para empresas de médio e grande porte que possuem frota corporativa, prestadoras de serviços de entrega e logística, condomínios empresariais com veículos compartilhados, organizações governamentais e públicas com controle patrimonial rigoroso, e qualquer instituição que necessite rastreabilidade e controle de uso de veículos. A interface intuitiva permite uso por funcionários sem treinamento técnico extensivo.
     `,
         stats: [
-            { label: "Tempo de Desenvolvimento", value: "4 semanas" },
-            { label: "Tecnologias", value: "16" },
-            { label: "Componentes", value: "8" },
+            { label: "Tempo de Desenvolvimento", value: "3 meses" },
+            { label: "Tecnologias", value: "12" },
+            { label: "Modelos de Dados", value: "4" },
         ],
     },
 
@@ -71,44 +71,54 @@ export const projectData = {
         title: "Principais Funcionalidades",
         items: [
             {
-                icon: "🌓",
-                title: "Dark Mode Automático",
-                description: "Sistema completo de alternância entre temas claro e escuro com persistência de preferência do usuário e respeito à configuração do sistema operacional.",
+                icon: "👥",
+                title: "Gestão de Motoristas",
+                description: "Cadastro completo de motoristas com CNH, RE, empresa de origem e cargo. Edição e exclusão de registros com validação de dados e controle de motoristas já em uso de veículos.",
+            },
+            {
+                icon: "🚗",
+                title: "Controle de Veículos",
+                description: "Cadastro detalhado da frota com placa, marca, modelo, ano e cor. Sistema automático de status (disponível/em uso) que atualiza em tempo real conforme registros de saída e retorno.",
+            },
+            {
+                icon: "📝",
+                title: "Registro de Uso",
+                description: "Formulários inteligentes que mostram apenas motoristas e veículos disponíveis. Registro automático de data, horário de saída, destino e quilometragem inicial com validações de unicidade.",
+            },
+            {
+                icon: "🏁",
+                title: "Finalização de Uso",
+                description: "Interface rápida para registrar retorno de veículos com horário automático, quilometragem final e atualização instantânea de disponibilidade do veículo para novo uso.",
+            },
+            {
+                icon: "📊",
+                title: "Relatórios Detalhados",
+                description: "Sistema completo de relatórios com filtros por data, motorista e veículo. Visualização de histórico de usos, distâncias percorridas, tempo de utilização e estatísticas gerenciais.",
+            },
+            {
+                icon: "📅",
+                title: "Sistema de Agendamento",
+                description: "Funcionalidade para agendar uso futuro de veículos, permitindo planejamento antecipado de entregas e comprometimento da frota para datas específicas.",
+            },
+            {
+                icon: "🔍",
+                title: "Visão em Tempo Real",
+                description: "Dashboard principal com cards informativos mostrando status atual de cada veículo, motorista responsável quando em uso, e informações de tooltip com detalhes do uso atual.",
+            },
+            {
+                icon: "✅",
+                title: "Validações Inteligentes",
+                description: "Sistema de validação que impede motorista usar múltiplos veículos simultaneamente, veículo ser usado por mais de um motorista, e garante consistência dos dados através do ORM Django.",
             },
             {
                 icon: "🎨",
-                title: "Temas Totalmente Configuráveis",
-                description: "Personalize todas as cores (fundos, textos, cards, header, footer) para light e dark mode em um único arquivo de configuração centralizado.",
+                title: "Interface Moderna e Responsiva",
+                description: "Design profissional com Tailwind CSS totalmente responsivo para uso em desktop, tablet e mobile. Modais interativos, formulários crispy e feedback visual com mensagens toast.",
             },
             {
-                icon: "📱",
-                title: "Design 100% Responsivo",
-                description: "Interface totalmente adaptável a diferentes tamanhos de tela, garantindo ótima experiência em desktop, tablet e mobile com grid system moderno.",
-            },
-            {
-                icon: "⚡",
-                title: "Performance Otimizada",
-                description: "Utiliza Next.js com SSR, SSG e otimização automática de imagens para carregamento ultra-rápido das páginas e melhor SEO.",
-            },
-            {
-                icon: "🧩",
-                title: "Componentes Modulares",
-                description: "Arquitetura baseada em componentes React reutilizáveis com hook customizado (useThemeColors) para gerenciamento de estilos, facilitando manutenção e customização.",
-            },
-            {
-                icon: "⚙️",
-                title: "Configuração Centralizada",
-                description: "Todo conteúdo e estilos gerenciados através de um único arquivo (projectData.js), simplificando edições sem necessidade de tocar no código dos componentes.",
-            },
-            {
-                icon: "🔗",
-                title: "Rotas Dedicadas",
-                description: "Páginas separadas para funcionalidades, tecnologias e equipe com navegação fluida, melhorando organização do conteúdo e SEO.",
-            },
-            {
-                icon: "✨",
-                title: "Transições Suaves",
-                description: "Animações e transições elegantes entre temas, estados de componentes e interações do usuário para uma experiência visual premium.",
+                icon: "🔐",
+                title: "Controle de Dados",
+                description: "Proteção CSRF em todos os formulários, validação de dados no backend, relacionamentos com integridade referencial e auditoria através de timestamps automáticos de criação.",
             },
         ],
     },
@@ -116,26 +126,31 @@ export const projectData = {
     // Tecnologias
     technologies: {
         title: "Stack Tecnológico",
-        subtitle: "Tecnologias, ferramentas e plataformas utilizadas no desenvolvimento",
+        subtitle: "Tecnologias, ferramentas e plataformas utilizadas no desenvolvimento.",
 
         // Linguagens de Programação
         languages: {
             title: "Linguagens de Programação",
-            description: "Linguagens utilizadas no desenvolvimento do projeto",
+            description: "Linguagens utilizadas no desenvolvimento do projeto.",
             items: [
                 {
-                    name: "JavaScript (ES6+)",
-                    description: "Linguagem de programação moderna com recursos avançados, hooks e programação funcional",
+                    name: "Python",
+                    description: "Linguagem principal do backend com tipagem dinâmica e sintaxe clara para desenvolvimento rápido",
+                    image: "/images/tech/python.svg",
+                },
+                {
+                    name: "JavaScript",
+                    description: "Linguagem para interatividade no frontend, modais dinâmicos e validações em tempo real.",
                     image: "/images/tech/javascript.svg",
                 },
                 {
                     name: "HTML5",
-                    description: "Linguagem de marcação para estruturação do conteúdo web",
+                    description: "Linguagem de marcação para estruturação semântica das páginas e templates Django.",
                     image: "/images/tech/html.svg",
                 },
                 {
                     name: "CSS3",
-                    description: "Linguagem de estilização para design e layout responsivo",
+                    description: "Linguagem de estilização para layouts responsivos e design moderno.",
                     image: "/images/tech/css.svg",
                 },
             ],
@@ -144,21 +159,16 @@ export const projectData = {
         // Frameworks
         frameworks: {
             title: "Frameworks",
-            description: "Estruturas robustas que guiam a arquitetura e desenvolvimento",
+            description: "Estruturas robustas que guiam a arquitetura e desenvolvimento.",
             items: [
                 {
-                    name: "Next.js 14",
-                    description: "Framework React para aplicações web modernas com SSR, SSG e otimização automática",
-                    image: "/images/tech/nextjs.svg",
+                    name: "Django",
+                    description: "Framework web Python de alto nível que incentiva desenvolvimento rápido e design limpo com arquitetura MVT.",
+                    image: "/images/tech/django.svg",
                 },
                 {
-                    name: "React 18",
-                    description: "Biblioteca JavaScript para construção de interfaces de usuário com componentes reutilizáveis",
-                    image: "/images/tech/react.svg",
-                },
-                {
-                    name: "Tailwind CSS 3",
-                    description: "Framework CSS utility-first para estilização rápida, responsiva e com suporte a dark mode",
+                    name: "Tailwind CSS",
+                    description: "Framework CSS utility-first para estilização rápida, responsiva e componentes customizados.",
                     image: "/images/tech/tailwind.svg",
                 },
             ],
@@ -167,22 +177,22 @@ export const projectData = {
         // Bibliotecas
         libraries: {
             title: "Bibliotecas",
-            description: "Pacotes e módulos que estendem as funcionalidades do projeto",
+            description: "Pacotes e módulos que estendem as funcionalidades do projeto.",
             items: [
                 {
-                    name: "next-themes",
-                    description: "Biblioteca para gerenciamento de temas com persistência, SSR support e alternância light/dark",
-                    image: "/images/tech/nextjs.svg",
+                    name: "Django Crispy Forms",
+                    description: "Biblioteca para renderização elegante de formulários Django com controle total do HTML.",
+                    image: "/images/tech/django.svg",
                 },
                 {
-                    name: "PostCSS",
-                    description: "Ferramenta para transformar CSS com JavaScript, usado pelo Tailwind",
-                    image: "/images/tech/postcss.svg",
+                    name: "Crispy Tailwind",
+                    description: "Template pack para integração entre Django Crispy Forms e Tailwind CSS.",
+                    image: "/images/tech/tailwind.svg",
                 },
                 {
-                    name: "Autoprefixer",
-                    description: "Plugin PostCSS para adicionar prefixos de navegadores automaticamente",
-                    image: "/images/tech/autoprefixer.svg",
+                    name: "Font Awesome",
+                    description: "Biblioteca de ícones vetoriais para interface moderna e intuitiva.",
+                    image: "/images/tech/fontawesome.svg",
                 },
             ],
         },
@@ -190,32 +200,22 @@ export const projectData = {
         // Ferramentas de Desenvolvimento
         tools: {
             title: "Ferramentas de Desenvolvimento",
-            description: "Ferramentas essenciais para desenvolvimento, versionamento e produtividade",
+            description: "Ferramentas essenciais para desenvolvimento, versionamento e produtividade.",
             items: [
                 {
-                    name: "Node.js 20",
-                    description: "Ambiente de execução JavaScript para desenvolvimento, build e execução do servidor Next.js",
-                    image: "/images/tech/nodejs.svg",
-                },
-                {
-                    name: "npm",
-                    description: "Gerenciador de pacotes para instalação e controle de dependências do projeto",
-                    image: "/images/tech/npm.svg",
+                    name: "SQLite",
+                    description: "Banco de dados relacional leve e embutido para armazenamento de motoristas, veículos e registros de uso.",
+                    image: "/images/tech/sqlite.svg",
                 },
                 {
                     name: "Git",
-                    description: "Sistema de controle de versão distribuído para rastreamento de mudanças no código",
+                    description: "Sistema de controle de versão distribuído para rastreamento de mudanças e colaboração.",
                     image: "/images/tech/git.svg",
                 },
                 {
                     name: "VS Code",
-                    description: "Editor de código moderno com extensões, IntelliSense e integração Git",
+                    description: "Editor de código com extensões Python/Django, IntelliSense e debugger integrado.",
                     image: "/images/tech/vscode.svg",
-                },
-                {
-                    name: "ESLint",
-                    description: "Ferramenta de linting para identificar e corrigir problemas no código JavaScript",
-                    image: "/images/tech/eslint.svg",
                 },
             ],
         },
@@ -223,43 +223,38 @@ export const projectData = {
         // Plataformas e Deploy
         platforms: {
             title: "Plataformas e Deploy",
-            description: "Serviços de hospedagem, deploy e controle de versão",
+            description: "Serviços de hospedagem, deploy e controle de versão.",
             items: [
                 {
-                    name: "Vercel",
-                    description: "Plataforma de deploy otimizada para projetos Next.js com CI/CD automático e edge network",
-                    image: "/images/tech/vercel.svg",
-                },
-                {
                     name: "GitHub",
-                    description: "Plataforma de hospedagem de código-fonte com versionamento, colaboração e GitHub Actions",
+                    description: "Plataforma de hospedagem de código-fonte com versionamento, colaboração e documentação.",
                     image: "/images/tech/github.svg",
                 },
             ],
         },
     },    // Galeria / Screenshots
     gallery: {
-        title: "Capturas de Tela do Template",
+        title: "Capturas de Tela do Sistema",
         images: [
             {
                 src: "/images/screenshots/home.png",
-                caption: "Página principal com Hero Section e seções de preview",
+                caption: "Dashboard principal com visão em tempo real dos veículos disponíveis e em uso",
             },
             {
-                src: "/images/screenshots/features.jpg",
-                caption: "Página dedicada de funcionalidades com grid responsivo",
+                src: "/images/screenshots/cadastro-motorista.jpg",
+                caption: "Modal de cadastro de motorista com validação de CNH, RE e empresa",
             },
             {
-                src: "/images/screenshots/technologies.jpg",
-                caption: "Showcase de tecnologias utilizadas no projeto",
+                src: "/images/screenshots/registro-uso.jpg",
+                caption: "Formulário inteligente de registro de uso com filtro de disponíveis",
             },
             {
-                src: "/images/screenshots/team.jpg",
-                caption: "Página da equipe com perfis e redes sociais",
+                src: "/images/screenshots/relatorio.jpg",
+                caption: "Página de relatórios com filtros por data, motorista e veículo",
             },
             {
                 src: "/images/screenshots/mobile.jpg",
-                caption: "Design responsivo em dispositivos móveis",
+                caption: "Interface responsiva adaptada para tablets e smartphones",
             },
         ],
     },
@@ -268,22 +263,19 @@ export const projectData = {
     results: {
         title: "Resultados Alcançados",
         content: `
-      O projeto superou todos os objetivos propostos, resultando em um template funcional, 
-      profissional e altamente customizável. A estrutura modular com sistema de temas 
-      configurável permite rápida adaptação para diferentes tipos de projetos acadêmicos 
-      mantendo acessibilidade e modernidade visual.
+      O Sistema de Controle de Veículos de Portaria atingiu seus objetivos acadêmicos e 
+      funcionais, resultando em uma solução web completa, robusta e fácil de usar. A aplicação 
+      moderniza o processo de controle de frotas, substituindo planilhas e papéis por um 
+      sistema digital inteligente com validações automáticas e visão em tempo real da 
+      disponibilidade dos veículos, ajudando tanto os gestores, quanto os porteiros.
     `,
         achievements: [
-            "Template totalmente funcional com 8 componentes reutilizáveis e responsivos",
-            "Dark Mode completo com alternância automática e persistência de preferência",
-            "Sistema de temas configurável com 14+ propriedades de cores personalizáveis",
-            "Hook customizado (useThemeColors) para gerenciamento centralizado de estilos",
-            "Sistema de rotas implementado com navegação fluida entre páginas",
-            "Documentação completa no README com instruções de uso e customização",
-            "Performance otimizada com Next.js alcançando 90+ no Lighthouse",
-            "Design responsivo testado em múltiplos dispositivos e resoluções",
-            "Código versionado no GitHub com licença MIT (open-source)",
-            "Transições suaves e animações para melhor experiência do usuário",
+            "Eliminação completa do controle manual em planilhas, reduzindo erros operacionais e aumentando a confiabilidade dos registros;",
+            "Visão em tempo real da disponibilidade da frota, permitindo tomada de decisões ágeis pela equipe de portaria e gestores;",
+            "Automatização do controle de saídas e retornos, economizando tempo operacional e facilitando auditorias internas;",
+            "Geração de relatórios gerenciais que antes eram impossíveis, fornecendo insights sobre uso da frota e otimização de recursos;",
+            "Interface intuitiva que não requer treinamento técnico extensivo, permitindo adoção imediata pela equipe de portaria;",
+            "Sistema desenvolvido com arquitetura escalável e robusta, atualmente em fase de ajustes finais para deploy em produção na empresa.",
         ],
     },
 
@@ -292,29 +284,29 @@ export const projectData = {
         title: "Desenvolvedor",
         members: [
             {
-                name: "Thiago F.S Dias",
-                role: "Aspirante a Full-Stack Developer",
-                image: "/images/team/thiago.jpg",
-                github: "https://github.com/tremedam",
-                linkedin: "https://www.linkedin.com/in/thiago-fellipe-28471a26a/",
+                name: "Erik Paiva",
+                role: "Desenvolvedor Python/Django",
+                image: "/images/team/paiva.jpg",
+                github: "https://github.com/PaivaOfc",
+                linkedin: "#",
             },
         ],
         advisor: {
             name: "Projeto Individual",
-            role: "Trabalho Acadêmico Autônomo",
-            email: "thiagofellipe055@gmail.com",
+            role: "Sistema de Gestão Corporativa",
+            email: "contato@projeto.com",
         },
     },
 
     // Rodapé
     footer: {
-        university: "Projeto de Estudo Pessoal",
-        course: "Desenvolvimento Web Full-Stack",
+        university: "Projeto de Desenvolvimento Profissional",
+        course: "Sistema de Gestão Corporativa com Django",
         semester: "2025",
         year: "2025",
         contact: {
-            email: "thiagofellipe055@gmail.com",
-            github: "https://github.com/tremedam/boilerplate",
+            email: "contato@projeto.com",
+            github: "https://github.com/PaivaOfc/Controle-Carros-Portaria",
         },
     },
 
