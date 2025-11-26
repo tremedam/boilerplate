@@ -12,7 +12,7 @@ export const projectData = {
         title: "Sistema de Controle de Uso de Carros Particulares da Empresa",
         description:
             "Uma solução web completa desenvolvida com Django para gerenciar o uso dos veículos corporativos, controlar motoristas autorizados, registrar entregas e monitorar a disponibilidade da frota em tempo real. Sistema intuitivo com interface moderna usando Tailwind CSS.",
-        image: "/images/apresentacao.jpg",
+        image: "/images/screenshots/listausos.jpeg",
         buttons: [
             {
                 text: "Ver GitHub",
@@ -237,24 +237,48 @@ export const projectData = {
         title: "Capturas de Tela do Sistema",
         images: [
             {
-                src: "/images/screenshots/home.png",
+                src: "/images/screenshots/home.jpeg",
                 caption: "Dashboard principal com visão em tempo real dos veículos disponíveis e em uso",
             },
             {
-                src: "/images/screenshots/cadastro-motorista.jpg",
-                caption: "Modal de cadastro de motorista com validação de CNH, RE e empresa",
+                src: "/images/screenshots/veiculos.jpeg",
+                caption: "Página de gerenciamento de veículos com listagem completa da frota",
             },
             {
-                src: "/images/screenshots/registro-uso.jpg",
+                src: "/images/screenshots/motos.jpeg",
+                caption: "Gestão de motoristas cadastrados com informações de CNH e empresa",
+            },
+            {
+                src: "/images/screenshots/addveiculo.jpeg",
+                caption: "Formulário de cadastro de novos veículos com validação de dados",
+            },
+            {
+                src: "/images/screenshots/editveiculos.jpeg",
+                caption: "Interface de edição de veículos com campos completos",
+            },
+            {
+                src: "/images/screenshots/editmoto.jpeg",
+                caption: "Modal de edição de motorista com validação de CNH, RE e empresa",
+            },
+            {
+                src: "/images/screenshots/regisveiculo.jpeg",
                 caption: "Formulário inteligente de registro de uso com filtro de disponíveis",
             },
             {
-                src: "/images/screenshots/relatorio.jpg",
-                caption: "Página de relatórios com filtros por data, motorista e veículo",
+                src: "/images/screenshots/finalizaruso.jpeg",
+                caption: "Interface para finalização de uso de veículo com registro de retorno",
             },
             {
-                src: "/images/screenshots/mobile.jpg",
-                caption: "Interface responsiva adaptada para tablets e smartphones",
+                src: "/images/screenshots/listausos.jpeg",
+                caption: "Listagem completa de histórico de usos dos veículos",
+            },
+            {
+                src: "/images/screenshots/veiculostatus.jpeg",
+                caption: "Visualização de status dos veículos com indicadores em tempo real",
+            },
+            {
+                src: "/images/screenshots/gerarrelat.jpeg",
+                caption: "Página de relatórios com filtros por data, motorista e veículo",
             },
         ],
     },
