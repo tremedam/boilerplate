@@ -4,7 +4,7 @@ export const projectData = {
     header: {
         title: "Controle de Veículos - Portaria",
         subtitle: "Sistema de Gestão de Veículos Corporativos",
-        logo: "/images/logotemplate.png", // opcional
+        logo: "", // opcional
     },
 
     // Hero / Seção Principal
@@ -18,11 +18,6 @@ export const projectData = {
                 text: "Ver GitHub",
                 href: "https://github.com/PaivaOfc/Controle-Carros-Portaria",
                 primary: true,
-            },
-            {
-                text: "Demonstração",
-                href: "#",
-                primary: false,
             },
         ],
     },
