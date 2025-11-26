@@ -4,7 +4,7 @@ export const projectData = {
     header: {
         title: "Controle de Veículos - Portaria",
         subtitle: "Sistema de Gestão de Veículos Corporativos",
-        logo: "", // opcional
+        logo: "/images/logo.ico", // opcional
     },
 
     // Hero / Seção Principal
@@ -258,6 +258,10 @@ export const projectData = {
             {
                 src: "/images/screenshots/regisveiculo.jpeg",
                 caption: "Formulário inteligente de registro de uso com filtro de disponíveis",
+            },
+            {
+                src: "/images/screenshots/registro.jpg",
+                caption: "Tela de registro de utilização de veículos com dados completos",
             },
             {
                 src: "/images/screenshots/finalizaruso.jpeg",
