@@ -48,6 +48,12 @@ npm install
 
 Aguarde alguns minutos enquanto as dependências são instaladas.
 
+> **⚠️ Importante:** Este template utiliza a biblioteca `next-themes` para o sistema de dark mode. Ela já está incluída no `package.json` e será instalada automaticamente com o comando acima. Se por algum motivo precisar instalá-la manualmente, use:
+>
+> ```powershell
+> npm install next-themes
+> ```
+
 3. **Execute o projeto:**
 
 ```powershell

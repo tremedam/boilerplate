@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { projectData } from "@/data/projectData";
 import { useThemeColors } from "@/hooks/useThemeColors";
@@ -6,6 +6,47 @@ import { useThemeColors } from "@/hooks/useThemeColors";
 export default function Gallery() {
     const { colors } = useThemeColors();
     const [selectedImage, setSelectedImage] = useState(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    // Função para navegar para a próxima imagem
+    const nextImage = () => {
+        const newIndex = (currentIndex + 1) % projectData.gallery.images.length;
+        setCurrentIndex(newIndex);
+        setSelectedImage(projectData.gallery.images[newIndex]);
+    };
+
+    // Função para navegar para a imagem anterior
+    const prevImage = () => {
+        const newIndex = currentIndex === 0
+            ? projectData.gallery.images.length - 1
+            : currentIndex - 1;
+        setCurrentIndex(newIndex);
+        setSelectedImage(projectData.gallery.images[newIndex]);
+    };
+
+    // Suporte para teclas do teclado
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (!selectedImage) return;
+
+            if (e.key === "ArrowRight") {
+                nextImage();
+            } else if (e.key === "ArrowLeft") {
+                prevImage();
+            } else if (e.key === "Escape") {
+                setSelectedImage(null);
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [selectedImage, currentIndex]);
+
+    // Atualizar índice quando uma imagem é selecionada
+    const handleImageClick = (image, index) => {
+        setCurrentIndex(index);
+        setSelectedImage(image);
+    };
 
     return (
         <section className="py-16 px-4 transition-colors duration-300">
@@ -22,7 +63,7 @@ export default function Gallery() {
                         <div
                             key={index}
                             className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-                            onClick={() => setSelectedImage(image)}
+                            onClick={() => handleImageClick(image, index)}
                             style={{
                                 backgroundColor: colors.cards.bg,
                                 borderColor: colors.cards.border,
@@ -56,10 +97,31 @@ export default function Gallery() {
                         className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
                         onClick={() => setSelectedImage(null)}
                     >
-                        <div className="max-w-4xl w-full">
+                        <div className="max-w-5xl w-full relative">
+                            {/* Botão Anterior */}
+                            <button
+                                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full p-4 shadow-lg transition-all duration-300 z-10 group"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    prevImage();
+                                }}
+                                aria-label="Imagem anterior"
+                            >
+                                <svg
+                                    className="w-6 h-6 transition-colors duration-300"
+                                    style={{ color: colors.text }}
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+
                             <div
                                 className="rounded-lg overflow-hidden shadow-2xl"
                                 style={{ backgroundColor: colors.cards.bg }}
+                                onClick={(e) => e.stopPropagation()}
                             >
                                 <div className="w-full max-h-[70vh] relative bg-gray-200 dark:bg-gray-700 overflow-hidden flex items-center justify-center">
                                     <img
@@ -75,8 +137,32 @@ export default function Gallery() {
                                     <p className="text-center text-lg">
                                         {selectedImage.caption}
                                     </p>
+                                    <p className="text-center text-sm opacity-60 mt-2">
+                                        {currentIndex + 1} / {projectData.gallery.images.length}
+                                    </p>
                                 </div>
                             </div>
+
+                            {/* Botão Próximo */}
+                            <button
+                                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full p-4 shadow-lg transition-all duration-300 z-10 group"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    nextImage();
+                                }}
+                                aria-label="Próxima imagem"
+                            >
+                                <svg
+                                    className="w-6 h-6 transition-colors duration-300"
+                                    style={{ color: colors.text }}
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+
                             <button
                                 className="mt-4 w-full py-2 px-4 rounded-lg font-semibold transition-all duration-300 hover:opacity-80"
                                 style={{

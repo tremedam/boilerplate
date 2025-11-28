@@ -55,58 +55,40 @@ export default function Results() {
                 </div>
 
                 {/* Estatísticas resumidas */}
-                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="mt-12 flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
                     <div
-                        className="p-6 rounded-lg text-center shadow-lg transform transition-all duration-300 hover:scale-105"
+                        className="p-8 rounded-lg text-center shadow-lg transform transition-all duration-300 hover:scale-105 w-full sm:w-64 md:w-80"
                         style={{
                             backgroundColor: colors.cards.bg,
                             color: colors.cards.text,
                         }}
                     >
                         <div
-                            className="text-4xl font-bold mb-2 transition-colors duration-300"
+                            className="text-4xl md:text-4xl font-bold mb-2 transition-colors duration-300"
                             style={{ color: colors.cards.text }}
                         >
                             {projectData.results.achievements.length}
                         </div>
-                        <div className="text-sm uppercase tracking-wide opacity-80">
+                        <div className="text-sm md:text-base uppercase tracking-wide opacity-80">
                             Conquistas
                         </div>
                     </div>
 
                     <div
-                        className="p-6 rounded-lg text-center shadow-lg transform transition-all duration-300 hover:scale-105"
+                        className="p-6 rounded-lg text-center shadow-lg transform transition-all duration-300 hover:scale-105 w-full sm:w-64 md:w-80"
                         style={{
                             backgroundColor: colors.cards.bg,
                             color: colors.cards.text,
                         }}
                     >
                         <div
-                            className="text-4xl font-bold mb-2 transition-colors duration-300"
+                            className="text-4xl md:text-4xl font-bold mb-2 transition-colors duration-300"
                             style={{ color: colors.cards.text }}
                         >
                             {projectData.about.stats[0].value}
                         </div>
-                        <div className="text-sm uppercase tracking-wide opacity-80">
+                        <div className="text-sm md:text-base uppercase tracking-wide opacity-80">
                             {projectData.about.stats[0].label}
-                        </div>
-                    </div>
-
-                    <div
-                        className="p-6 rounded-lg text-center shadow-lg transform transition-all duration-300 hover:scale-105"
-                        style={{
-                            backgroundColor: colors.cards.bg,
-                            color: colors.cards.text,
-                        }}
-                    >
-                        <div
-                            className="text-4xl font-bold mb-2 transition-colors duration-300"
-                            style={{ color: colors.cards.text }}
-                        >
-                            90+
-                        </div>
-                        <div className="text-sm uppercase tracking-wide opacity-80">
-                            Score Lighthouse
                         </div>
                     </div>
                 </div>

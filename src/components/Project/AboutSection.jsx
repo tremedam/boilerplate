@@ -63,6 +63,22 @@ export default function AboutSection({ data, theme }) {
           <div className="w-24 h-1 mx-auto rounded-full transition-colors duration-300" style={{ backgroundColor: colors.title }}></div>
         </div>
 
+        {/* Imagem (se existir) */}
+        {data.image && (
+          <div className="mb-12 flex justify-center">
+            <div className="relative inline-block max-w-full">
+              <img
+                src={data.image}
+                alt={data.title}
+                className="rounded-2xl shadow-2xl w-auto h-auto max-w-full max-h-[600px] object-contain"
+                style={{
+                  border: `3px solid ${colors.cards.border}`,
+                }}
+              />
+            </div>
+          </div>
+        )}
+
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Cards de conteúdo - 3 colunas */}
           <div className="lg:col-span-3 space-y-6">
