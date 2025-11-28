@@ -27,7 +27,7 @@ export const projectData = {
             },
             {
                 text: "Documentação",
-                href: "/docs/LICENSE",
+                href: "https://github.com/tremedam/boilerplate/blob/main/docs/GUIA_DE_USO.md",
                 primary: false,
             },
         ],
