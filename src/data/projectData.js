@@ -1,13 +1,19 @@
-// Configure o conteúdo do seu projeto acadêmico aqui
+// ============================================================================
+// CONFIGURAÇÃO DO TEMPLATE - Personalize aqui todo o conteúdo do seu projeto
+// ============================================================================
+// DICA: Substitua os textos de exemplo pelos dados do seu projeto
+//       Caminhos de imagens sempre começam com /images/
+// ============================================================================
+
 export const projectData = {
-    // Cabeçalho
+    // Cabeçalho - Aparece no topo de todas as páginas
     header: {
         title: "Template Acadêmico Pro",
         subtitle: "Boilerplate para Apresentação de Projetos Universitários",
-        logo: "/images/logotemplate.png", // opcional
+        logo: "/images/logotemplate.png", // opcional - deixe "" se não tiver
     },
 
-    // Hero / Seção Principal
+    // Hero / Seção Principal - Primeira impressão do visitante
     hero: {
         title: "Sistema de Apresentação de Projetos Acadêmicos",
         description:
@@ -17,7 +23,7 @@ export const projectData = {
             {
                 text: "Ver GitHub",
                 href: "https://github.com/tremedam/boilerplate",
-                primary: true,
+                primary: true, // true = botão destacado | false = botão secundário
             },
             {
                 text: "Documentação",
@@ -27,9 +33,12 @@ export const projectData = {
         ],
     },
 
-    // Sobre o Projeto
+    // Sobre o Projeto - Descrição detalhada
+    // Use **Título:** para criar seções organizadas
+    // Use • para bullet points (opcional)
     about: {
         title: "Sobre o Projeto",
+        // image: "/images/diagrama.png", // opcional - descomente para adicionar imagem
         content: `
         
       **Visão Geral:**
@@ -62,11 +71,12 @@ export const projectData = {
         stats: [
             { label: "Tempo de Desenvolvimento", value: "4 semanas" },
             { label: "Tecnologias", value: "16" },
-            { label: "Componentes", value: "8" },
+            { label: "Componentes", value: "9" },
         ],
     },
 
-    // Funcionalidades
+    // Funcionalidades - Lista as principais características (6-8 itens recomendado)
+    // icon: Use emojis (🚀 📱 🎨 ⚡ 🌓 etc.)
     features: {
         title: "Principais Funcionalidades",
         items: [
@@ -113,12 +123,12 @@ export const projectData = {
         ],
     },
 
-    // Tecnologias
+    // Tecnologias - Organize por categorias
+    // Baixe logos em: https://simpleicons.org/ ou https://devicon.dev/
     technologies: {
         title: "Stack Tecnológico",
         subtitle: "Tecnologias, ferramentas e plataformas utilizadas no desenvolvimento",
 
-        // Linguagens de Programação
         languages: {
             title: "Linguagens de Programação",
             description: "Linguagens utilizadas no desenvolvimento do projeto",
@@ -141,7 +151,6 @@ export const projectData = {
             ],
         },
 
-        // Frameworks
         frameworks: {
             title: "Frameworks",
             description: "Estruturas robustas que guiam a arquitetura e desenvolvimento",
@@ -164,7 +173,6 @@ export const projectData = {
             ],
         },
 
-        // Bibliotecas
         libraries: {
             title: "Bibliotecas",
             description: "Pacotes e módulos que estendem as funcionalidades do projeto",
@@ -187,7 +195,6 @@ export const projectData = {
             ],
         },
 
-        // Ferramentas de Desenvolvimento
         tools: {
             title: "Ferramentas de Desenvolvimento",
             description: "Ferramentas essenciais para desenvolvimento, versionamento e produtividade",
@@ -220,7 +227,6 @@ export const projectData = {
             ],
         },
 
-        // Plataformas e Deploy
         platforms: {
             title: "Plataformas e Deploy",
             description: "Serviços de hospedagem, deploy e controle de versão",
@@ -237,7 +243,10 @@ export const projectData = {
                 },
             ],
         },
-    },    // Galeria / Screenshots
+    },
+
+    // Galeria - Capturas de tela e diagramas
+    // Coloque imagens em: public/images/screenshots/
     gallery: {
         title: "Capturas de Tela do Template",
         images: [
@@ -264,7 +273,7 @@ export const projectData = {
         ],
     },
 
-    // Resultados
+    // Resultados - Conquistas e objetivos alcançados
     results: {
         title: "Resultados Alcançados",
         content: `
@@ -287,7 +296,8 @@ export const projectData = {
         ],
     },
 
-    // Equipe
+    // Equipe - Informações dos desenvolvedores
+    // Fotos em: public/images/team/
     team: {
         title: "Desenvolvedor",
         members: [
@@ -306,7 +316,7 @@ export const projectData = {
         },
     },
 
-    // Rodapé
+    // Rodapé - Informações institucionais
     footer: {
         university: "Projeto de Estudo Pessoal",
         course: "Desenvolvimento Web Full-Stack",
@@ -318,50 +328,50 @@ export const projectData = {
         },
     },
 
-    // Configuração de Cores (Light e Dark Mode)
+    // Cores - Personalize o tema light e dark
+    // Use cores hexadecimais (#RRGGBB)
+    // Paletas sugeridas em: https://coolors.co/
     theme: {
         light: {
-            primary: "#2563eb", // azul tech (Next.js inspired)
-            secondary: "#0f172a", // slate escuro (moderno/tech)
-            accent: "#09c8aea3", // cyan vibrante (destaque tech)
+            primary: "#2563eb",
+            secondary: "#0f172a",
+            accent: "#09c8aea3",
             background: "#ffffff",
             text: "#1f2937",
-            title: "#2563eb", // cor dos títulos (igual ao primary)
-            // Cores para componentes específicos
+            title: "#2563eb",
             header: {
-                bg: "#1e293b", // fundo do header
-                text: "#ffffff", // texto do header
+                bg: "#1e293b",
+                text: "#ffffff",
             },
             footer: {
-                bg: "#0f172a", // fundo do footer
-                text: "#ffffff", // texto do footer
+                bg: "#0f172a",
+                text: "#ffffff",
             },
             cards: {
-                bg: "#1e40af", // fundo dos cards
-                text: "#ffffff", // texto dos cards
-                border: "#1e40af", // borda dos cards
+                bg: "#1e40af",
+                text: "#ffffff",
+                border: "#1e40af",
             },
         },
         dark: {
-            primary: "#3b82f6", // azul mais claro para dark mode
-            secondary: "#1e293b", // slate ainda mais escuro
-            accent: "#06b6d4", // cyan ajustado para dark
+            primary: "#3b82f6",
+            secondary: "#1e293b",
+            accent: "#06b6d4",
             background: "#0f172a",
             text: "#e2e8f0",
-            title: "#3b82f6", // cor dos títulos no dark mode (igual ao primary)
-            // Cores para componentes específicos
+            title: "#3b82f6",
             header: {
-                bg: "#0f172a", // fundo do header dark
-                text: "#e2e8f0", // texto do header dark
+                bg: "#0f172a",
+                text: "#e2e8f0",
             },
             footer: {
-                bg: "#020617", // fundo do footer dark
-                text: "#e2e8f0", // texto do footer dark
+                bg: "#020617",
+                text: "#e2e8f0",
             },
             cards: {
-                bg: "#1e293b", // fundo dos cards dark
-                text: "#e2e8f0", // texto dos cards dark
-                border: "#334155", // borda dos cards dark
+                bg: "#1e293b",
+                text: "#e2e8f0",
+                border: "#334155",
             },
         },
     },
