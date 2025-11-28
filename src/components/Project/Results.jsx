@@ -57,14 +57,15 @@ export default function Results() {
                 {/* Estatísticas resumidas */}
                 <div className="mt-12 flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
                     <div
-                        className="p-8 rounded-lg text-center shadow-lg transform transition-all duration-300 hover:scale-105 w-full sm:w-64 md:w-80"
+                        className="p-8 rounded-lg text-center shadow-lg border-l-4 transform transition-all duration-300 hover:scale-105 w-full sm:w-64 md:w-80"
                         style={{
                             backgroundColor: colors.cards.bg,
+                            borderLeftColor: colors.cards.border,
                             color: colors.cards.text,
                         }}
                     >
                         <div
-                            className="text-4xl md:text-4xl font-bold mb-2 transition-colors duration-300"
+                            className="text-3xl md:text-3xl font-bold mb-2 transition-colors duration-300"
                             style={{ color: colors.cards.text }}
                         >
                             {projectData.results.achievements.length}
@@ -75,14 +76,15 @@ export default function Results() {
                     </div>
 
                     <div
-                        className="p-6 rounded-lg text-center shadow-lg transform transition-all duration-300 hover:scale-105 w-full sm:w-64 md:w-80"
+                        className="p-8 rounded-lg text-center shadow-lg border-l-4 transform transition-all duration-300 hover:scale-105 w-full sm:w-64 md:w-80"
                         style={{
                             backgroundColor: colors.cards.bg,
+                            borderLeftColor: colors.cards.border,
                             color: colors.cards.text,
                         }}
                     >
                         <div
-                            className="text-4xl md:text-4xl font-bold mb-2 transition-colors duration-300"
+                            className="text-3xl md:text-3xl font-bold mb-2 transition-colors duration-300"
                             style={{ color: colors.cards.text }}
                         >
                             {projectData.about.stats[0].value}

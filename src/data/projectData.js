@@ -350,7 +350,7 @@ export const projectData = {
             cards: {
                 bg: "#1e40af",
                 text: "#ffffff",
-                border: "#1e40af",
+                border: "#2563eb", // Azul mais claro para contraste
             },
         },
         dark: {
