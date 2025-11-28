@@ -246,20 +246,20 @@ export const projectData = {
                 caption: "Página principal com Hero Section e seções de preview",
             },
             {
-                src: "/images/screenshots/features.jpg",
-                caption: "Página dedicada de funcionalidades com grid responsivo",
+                src: "/images/screenshots/pages.png",
+                caption: "Estrutura de páginas do projeto",
             },
             {
-                src: "/images/screenshots/technologies.jpg",
-                caption: "Showcase de tecnologias utilizadas no projeto",
+                src: "/images/screenshots/components.png",
+                caption: "Componentes reutilizáveis do template",
             },
             {
-                src: "/images/screenshots/team.jpg",
-                caption: "Página da equipe com perfis e redes sociais",
+                src: "/images/screenshots/code1.png",
+                caption: "Exemplo de código e implementação",
             },
             {
-                src: "/images/screenshots/mobile.jpg",
-                caption: "Design responsivo em dispositivos móveis",
+                src: "/images/screenshots/images.png",
+                caption: "Organização de imagens e assets do projeto",
             },
         ],
     },

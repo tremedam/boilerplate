@@ -94,13 +94,13 @@ export default function Gallery() {
                 {/* Modal de imagem ampliada */}
                 {selectedImage && (
                     <div
-                        className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+                        className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4 md:p-8 overflow-y-auto"
                         onClick={() => setSelectedImage(null)}
                     >
-                        <div className="max-w-5xl w-full relative">
+                        <div className="relative flex items-center justify-center w-full min-h-full max-w-7xl py-8">
                             {/* Botão Anterior */}
                             <button
-                                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full p-4 shadow-lg transition-all duration-300 z-10 group"
+                                className="absolute left-0 md:-left-16 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full p-3 md:p-4 shadow-lg transition-all duration-300 z-10"
                                 onClick={(e) => {
                                     e.stopPropagation();
                                     prevImage();
@@ -108,7 +108,7 @@ export default function Gallery() {
                                 aria-label="Imagem anterior"
                             >
                                 <svg
-                                    className="w-6 h-6 transition-colors duration-300"
+                                    className="w-5 h-5 md:w-6 md:h-6 transition-colors duration-300"
                                     style={{ color: colors.text }}
                                     fill="none"
                                     stroke="currentColor"
@@ -118,34 +118,49 @@ export default function Gallery() {
                                 </svg>
                             </button>
 
-                            <div
-                                className="rounded-lg overflow-hidden shadow-2xl"
-                                style={{ backgroundColor: colors.cards.bg }}
-                                onClick={(e) => e.stopPropagation()}
-                            >
-                                <div className="w-full max-h-[70vh] relative bg-gray-200 dark:bg-gray-700 overflow-hidden flex items-center justify-center">
-                                    <img
-                                        src={selectedImage.src}
-                                        alt={selectedImage.caption}
-                                        className="max-w-full max-h-[70vh] object-contain"
-                                    />
-                                </div>
+                            {/* Container da imagem */}
+                            <div className="flex flex-col items-center justify-center w-full my-auto">
                                 <div
-                                    className="p-6 transition-colors duration-300"
-                                    style={{ color: colors.cards.text }}
+                                    className="rounded-lg overflow-hidden shadow-2xl inline-block max-w-full"
+                                    style={{ backgroundColor: colors.cards.bg }}
+                                    onClick={(e) => e.stopPropagation()}
                                 >
-                                    <p className="text-center text-lg">
-                                        {selectedImage.caption}
-                                    </p>
-                                    <p className="text-center text-sm opacity-60 mt-2">
-                                        {currentIndex + 1} / {projectData.gallery.images.length}
-                                    </p>
+                                    {/* Imagem com tamanho original respeitado */}
+                                    <div className="flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-900">
+                                        <img
+                                            src={selectedImage.src}
+                                            alt={selectedImage.caption}
+                                            className="w-auto h-auto max-w-full max-h-[60vh] object-contain rounded"
+                                        />
+                                    </div>
+                                    <div
+                                        className="p-4 md:p-6 transition-colors duration-300"
+                                        style={{ color: colors.cards.text }}
+                                    >
+                                        <p className="text-center text-sm md:text-lg">
+                                            {selectedImage.caption}
+                                        </p>
+                                        <p className="text-center text-xs md:text-sm opacity-60 mt-2">
+                                            {currentIndex + 1} / {projectData.gallery.images.length}
+                                        </p>
+                                    </div>
                                 </div>
+
+                                <button
+                                    className="mt-4 py-2 px-6 md:px-8 rounded-lg font-semibold transition-all duration-300 hover:opacity-80 text-sm md:text-base"
+                                    style={{
+                                        backgroundColor: colors.primary,
+                                        color: "white",
+                                    }}
+                                    onClick={() => setSelectedImage(null)}
+                                >
+                                    Fechar
+                                </button>
                             </div>
 
                             {/* Botão Próximo */}
                             <button
-                                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full p-4 shadow-lg transition-all duration-300 z-10 group"
+                                className="absolute right-0 md:-right-16 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full p-3 md:p-4 shadow-lg transition-all duration-300 z-10"
                                 onClick={(e) => {
                                     e.stopPropagation();
                                     nextImage();
@@ -153,7 +168,7 @@ export default function Gallery() {
                                 aria-label="Próxima imagem"
                             >
                                 <svg
-                                    className="w-6 h-6 transition-colors duration-300"
+                                    className="w-5 h-5 md:w-6 md:h-6 transition-colors duration-300"
                                     style={{ color: colors.text }}
                                     fill="none"
                                     stroke="currentColor"
@@ -161,17 +176,6 @@ export default function Gallery() {
                                 >
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
-                            </button>
-
-                            <button
-                                className="mt-4 w-full py-2 px-4 rounded-lg font-semibold transition-all duration-300 hover:opacity-80"
-                                style={{
-                                    backgroundColor: colors.primary,
-                                    color: "white",
-                                }}
-                                onClick={() => setSelectedImage(null)}
-                            >
-                                Fechar
                             </button>
                         </div>
                     </div>
